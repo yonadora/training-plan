@@ -1,0 +1,124 @@
+{
+  "generated_for": "2026-10-03",
+  "source": "garmin_coach",
+  "plan_name": "Garmin Run Coach와 함께하는 하프마라톤 계획 계획",
+  "today": {
+    "date": "2026-10-03",
+    "level": "green",
+    "workouts": [
+      {
+        "code": "base",
+        "label": "BASE RUN",
+        "name": "기초체력 양성",
+        "detail": "8.7KM 5:55/KM",
+        "distance_km": 8.7,
+        "duration_min": 51,
+        "pace": "5:55",
+        "description": "5:55/km",
+        "sport": "running",
+        "done": false
+      },
+      {
+        "code": "strength",
+        "label": "CORE",
+        "name": "코어 순환 1",
+        "detail": "25MIN",
+        "distance_km": null,
+        "duration_min": 25,
+        "pace": null,
+        "description": "",
+        "sport": "strength_training",
+        "done": false
+      }
+    ],
+    "kind": "기초체력 양성",
+    "kind_code": "base",
+    "label": "BASE RUN",
+    "detail": "8.7KM 5:55/KM",
+    "distance_km": 8.7,
+    "pace": "5:55",
+    "duration_min": 51
+  },
+  "days": [
+    {
+      "date": "2026-10-03",
+      "workouts": [
+        {
+          "label": "BASE RUN",
+          "name": "기초체력 양성",
+          "detail": "8.7KM 5:55/KM"
+        },
+        {
+          "label": "CORE",
+          "name": "코어 순환 1",
+          "detail": "25MIN"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-04",
+      "workouts": [
+        {
+          "label": "LONG RUN",
+          "name": "장거리 달리기",
+          "detail": "13.8KM 5:55/KM"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-05",
+      "workouts": [
+        {
+          "label": "BASE RUN",
+          "name": "기초체력 양성",
+          "detail": "6.3KM 5:55/KM"
+        },
+        {
+          "label": "TOTAL BODY",
+          "name": "전신 순환 3회",
+          "detail": "25MIN"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-06",
+      "workouts": [
+        {
+          "label": "SPRINT",
+          "name": "스프린트",
+          "detail": "3X3X0:15@3:05"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "workouts": [
+        {
+          "label": "BASE RUN",
+          "name": "기초체력 양성",
+          "detail": "7.5KM 5:55/KM"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-08",
+      "workouts": [
+        {
+          "label": "RECOVERY",
+          "name": "회복",
+          "detail": "4.3KM 7:00/KM"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-09",
+      "workouts": [
+        {
+          "label": "THRESHOLD",
+          "name": "한계치",
+          "detail": "3X6:00@4:45"
+        }
+      ]
+    }
+  ]
+}

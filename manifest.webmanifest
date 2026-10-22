@@ -1,0 +1,11 @@
+{
+  "name": "훈련 플랜",
+  "short_name": "훈련",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#111417",
+  "theme_color": "#111417",
+  "icons": [
+    { "src": "icon-180.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}

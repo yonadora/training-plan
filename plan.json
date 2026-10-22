@@ -1,0 +1,104 @@
+{
+  "generated_for": "2026-10-03",
+  "today": {
+    "date": "2026-10-03",
+    "weekday": "토",
+    "kind": "편한 조깅",
+    "kind_code": "easy",
+    "distance_km": 0.4,
+    "pace": "7:01",
+    "duration_min": 3,
+    "level": "green",
+    "level_label": "초록",
+    "reasons": [
+      "오늘 지표 없음 — 판정 없이 예정대로"
+    ],
+    "garmin_note": null
+  },
+  "week": {
+    "start": "2026-09-28",
+    "planned_km": 1.7,
+    "done_km": 0,
+    "days": [
+      {
+        "date": "2026-09-28",
+        "weekday": "월",
+        "kind": "휴식",
+        "kind_code": "rest",
+        "distance_km": 0.0,
+        "pace": null,
+        "is_today": false,
+        "done": false
+      },
+      {
+        "date": "2026-09-29",
+        "weekday": "화",
+        "kind": "젖산역치",
+        "kind_code": "threshold",
+        "distance_km": 0.4,
+        "pace": "5:58",
+        "is_today": false,
+        "done": false
+      },
+      {
+        "date": "2026-09-30",
+        "weekday": "수",
+        "kind": "근력",
+        "kind_code": "strength",
+        "distance_km": 0.0,
+        "pace": null,
+        "is_today": false,
+        "done": false
+      },
+      {
+        "date": "2026-10-01",
+        "weekday": "목",
+        "kind": "편한 조깅",
+        "kind_code": "easy",
+        "distance_km": 0.4,
+        "pace": "7:01",
+        "is_today": false,
+        "done": false
+      },
+      {
+        "date": "2026-10-02",
+        "weekday": "금",
+        "kind": "휴식",
+        "kind_code": "rest",
+        "distance_km": 0.0,
+        "pace": null,
+        "is_today": false,
+        "done": false
+      },
+      {
+        "date": "2026-10-03",
+        "weekday": "토",
+        "kind": "편한 조깅",
+        "kind_code": "easy",
+        "distance_km": 0.4,
+        "pace": "7:01",
+        "is_today": true,
+        "done": false
+      },
+      {
+        "date": "2026-10-04",
+        "weekday": "일",
+        "kind": "편한 조깅",
+        "kind_code": "easy",
+        "distance_km": 0.5,
+        "pace": "7:01",
+        "is_today": false,
+        "done": false
+      }
+    ]
+  },
+  "goal": {
+    "distance_km": 10.0,
+    "target": "45:00",
+    "current": "58:00",
+    "current_is_default": false,
+    "reached": false,
+    "weeks_to_target": null,
+    "note": "기록이 8주치 모이면 도달 시점을 계산합니다. 현재 1주치."
+  }
+}

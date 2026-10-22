@@ -1,0 +1,87 @@
+:root {
+  --bg: #111417;
+  --card: #1a1f24;
+  --text: #e8ecef;
+  --dim: #8b959e;
+  --line: #262d34;
+  --green: #4ade80;
+  --yellow: #fbbf24;
+  --red: #f87171;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  padding: env(safe-area-inset-top) 16px env(safe-area-inset-bottom);
+}
+
+main { max-width: 480px; margin: 0 auto; padding: 16px 0 48px; }
+
+.card {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 12px;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--dim);
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.dot { font-size: 13px; font-weight: 600; }
+.dot.green  { color: var(--green); }
+.dot.yellow { color: var(--yellow); }
+.dot.red    { color: var(--red); }
+
+.kind { font-size: 28px; font-weight: 700; letter-spacing: -0.5px; }
+.pace { font-size: 20px; color: var(--dim); margin-top: 4px; }
+.amount { font-size: 15px; color: var(--dim); margin-top: 2px; }
+
+.reasons {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+  font-size: 14px;
+  color: var(--dim);
+}
+.reasons li { margin: 2px 0; }
+ul { margin: 0; padding-left: 18px; }
+
+.week-head {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: var(--dim);
+  margin-bottom: 12px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 28px 1fr auto;
+  gap: 8px;
+  padding: 7px 0;
+  font-size: 15px;
+}
+.row.today { color: var(--text); font-weight: 600; }
+.row:not(.today) { color: var(--dim); }
+.row .wd { color: var(--dim); }
+.row .km { font-variant-numeric: tabular-nums; }
+
+.goal-line { display: flex; justify-content: space-between; margin: 4px 0; }
+.goal-note { font-size: 14px; color: var(--dim); margin-top: 10px; }
+.hint { font-size: 12px; color: var(--yellow); }
+.done { color: var(--green); margin-left: 4px; }
+
+.loading, .error { color: var(--dim); text-align: center; padding: 48px 0; }
+.stale { color: var(--yellow); font-size: 13px; text-align: center; margin-top: 12px; }
