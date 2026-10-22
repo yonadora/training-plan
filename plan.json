@@ -1,24 +1,24 @@
 {
-  "generated_for": "2026-10-03",
+  "generated_for": "2026-10-04",
   "today": {
-    "date": "2026-10-03",
-    "weekday": "토",
-    "kind": "편한 조깅",
-    "kind_code": "easy",
-    "distance_km": 0.4,
-    "pace": "7:01",
-    "duration_min": 3,
-    "level": "green",
-    "level_label": "초록",
+    "date": "2026-10-04",
+    "weekday": "일",
+    "kind": "롱런",
+    "kind_code": "long",
+    "distance_km": 7.4,
+    "pace": "5:48",
+    "duration_min": 43,
+    "level": "yellow",
+    "level_label": "노랑",
     "reasons": [
-      "오늘 지표 없음 — 판정 없이 예정대로"
+      "심박변이도 상태 '불균형'"
     ],
     "garmin_note": null
   },
   "week": {
     "start": "2026-09-28",
-    "planned_km": 1.7,
-    "done_km": 0,
+    "planned_km": 24.8,
+    "done_km": 14.0,
     "days": [
       {
         "date": "2026-09-28",
@@ -33,10 +33,10 @@
       {
         "date": "2026-09-29",
         "weekday": "화",
-        "kind": "젖산역치",
-        "kind_code": "threshold",
-        "distance_km": 0.4,
-        "pace": "5:58",
+        "kind": "휴식",
+        "kind_code": "rest",
+        "distance_km": 0.0,
+        "pace": null,
         "is_today": false,
         "done": false
       },
@@ -55,8 +55,8 @@
         "weekday": "목",
         "kind": "편한 조깅",
         "kind_code": "easy",
-        "distance_km": 0.4,
-        "pace": "7:01",
+        "distance_km": 5.8,
+        "pace": "5:48",
         "is_today": false,
         "done": false
       },
@@ -73,21 +73,21 @@
       {
         "date": "2026-10-03",
         "weekday": "토",
-        "kind": "편한 조깅",
-        "kind_code": "easy",
-        "distance_km": 0.4,
-        "pace": "7:01",
-        "is_today": true,
-        "done": false
+        "kind": "인터벌",
+        "kind_code": "interval",
+        "distance_km": 5.8,
+        "pace": "4:25",
+        "is_today": false,
+        "done": true
       },
       {
         "date": "2026-10-04",
         "weekday": "일",
-        "kind": "편한 조깅",
-        "kind_code": "easy",
-        "distance_km": 0.5,
-        "pace": "7:01",
-        "is_today": false,
+        "kind": "롱런",
+        "kind_code": "long",
+        "distance_km": 7.4,
+        "pace": "5:48",
+        "is_today": true,
         "done": false
       }
     ]
@@ -95,10 +95,10 @@
   "goal": {
     "distance_km": 10.0,
     "target": "45:00",
-    "current": "58:00",
+    "current": "47:13",
     "current_is_default": false,
     "reached": false,
     "weeks_to_target": null,
-    "note": "기록이 8주치 모이면 도달 시점을 계산합니다. 현재 1주치."
+    "note": "기록이 8주치 모이면 도달 시점을 계산합니다. 현재 5주치."
   }
 }
