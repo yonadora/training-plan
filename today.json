@@ -1,117 +1,95 @@
 {
-  "generated_for": "2026-10-04",
+  "generated_for": "2026-10-16",
   "source": "garmin_coach",
   "plan_name": "Garmin Run Coach와 함께하는 하프마라톤 계획 계획",
   "today": {
-    "date": "2026-10-04",
-    "level": "yellow",
+    "date": "2026-10-16",
+    "level": "green",
     "workouts": [
       {
-        "code": "base",
-        "label": "BASE RUN",
-        "name": "기초체력 양성",
-        "detail": "5:50",
+        "code": "rest",
+        "label": "REST",
+        "name": "",
+        "detail": "",
         "distance_km": null,
-        "duration_min": 42,
-        "pace": "5:50",
-        "description": "5:50/km",
-        "sport": "running",
-        "done": false
-      },
-      {
-        "code": "strength",
-        "label": "TOTAL BODY",
-        "name": "전신 순환 2",
-        "detail": "25MIN",
-        "distance_km": null,
-        "duration_min": 25,
+        "duration_min": null,
         "pace": null,
         "description": "",
-        "sport": "strength_training",
+        "sport": "",
         "done": false
       }
     ],
-    "kind": "기초체력 양성",
-    "kind_code": "base",
-    "label": "BASE RUN",
-    "detail": "5:50",
+    "kind": "",
+    "kind_code": "rest",
+    "label": "REST",
+    "detail": "",
     "distance_km": null,
-    "pace": "5:50",
-    "duration_min": 42
+    "pace": null,
+    "duration_min": null
   },
   "days": [
     {
-      "date": "2026-10-04",
+      "date": "2026-10-15",
       "workouts": [
         {
           "label": "BASE RUN",
           "name": "기초체력 양성",
           "detail": "5:50"
-        },
-        {
-          "label": "TOTAL BODY",
-          "name": "전신 순환 2",
-          "detail": "25MIN"
         }
       ]
     },
     {
-      "date": "2026-10-05",
+      "date": "2026-10-16",
+      "workouts": [
+        {
+          "label": "REST",
+          "name": "",
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "date": "2026-10-17",
       "workouts": [
         {
           "label": "SPRINT",
           "name": "스프린트",
-          "detail": "9X0:10@3:00"
+          "detail": "5X0:15@4:00"
         }
       ]
     },
     {
-      "date": "2026-10-06",
+      "date": "2026-10-18",
+      "workouts": [
+        {
+          "label": "RUN",
+          "name": "",
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "date": "2026-10-19",
+      "workouts": [
+        {
+          "label": "REST",
+          "name": "",
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "date": "2026-10-20",
       "workouts": [
         {
           "label": "BASE RUN",
           "name": "기초체력 양성",
           "detail": "5:50"
-        },
-        {
-          "label": "CORE",
-          "name": "코어 안정성 2",
-          "detail": "25MIN"
         }
       ]
     },
     {
-      "date": "2026-10-07",
-      "workouts": [
-        {
-          "label": "BASE RUN",
-          "name": "기초체력 양성",
-          "detail": "5:50"
-        }
-      ]
-    },
-    {
-      "date": "2026-10-08",
-      "workouts": [
-        {
-          "label": "RECOVERY",
-          "name": "회복",
-          "detail": "7:00"
-        }
-      ]
-    },
-    {
-      "date": "2026-10-09",
-      "workouts": [
-        {
-          "label": "TEMPO",
-          "name": "템포",
-          "detail": "27:00@4:55"
-        }
-      ]
-    },
-    {
-      "date": "2026-10-10",
+      "date": "2026-10-21",
       "workouts": [
         {
           "label": "BASE RUN",
