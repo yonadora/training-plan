@@ -1,25 +1,26 @@
 {
-  "generated_for": "2026-10-16",
-  "source": "garmin_coach",
-  "plan_name": "Garmin Run Coach와 함께하는 하프마라톤 계획 계획",
+  "generated_for": "2026-10-22",
+  "source": "garmin_calendar",
+  "plan_name": "",
   "today": {
-    "date": "2026-10-16",
+    "date": "2026-10-22",
     "level": "green",
     "workouts": [
       {
         "code": "rest",
         "label": "REST",
-        "name": "",
+        "name": "휴식",
         "detail": "",
         "distance_km": null,
         "duration_min": null,
         "pace": null,
         "description": "",
         "sport": "",
-        "done": false
+        "done": false,
+        "source": ""
       }
     ],
-    "kind": "",
+    "kind": "휴식",
     "kind_code": "rest",
     "label": "REST",
     "detail": "",
@@ -29,72 +30,77 @@
   },
   "days": [
     {
-      "date": "2026-10-15",
+      "date": "2026-10-24",
       "workouts": [
         {
+          "code": "race",
+          "label": "RACE",
+          "name": "10km 대회 45분 목표",
+          "detail": "10.0KM",
+          "distance_km": 10.0,
+          "duration_min": null,
+          "done": false,
+          "source": "garmin_calendar"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-27",
+      "workouts": [
+        {
+          "code": "recovery",
+          "label": "RECOVERY",
+          "name": "대회 후 회복 달리기 6km",
+          "detail": "6.0KM",
+          "distance_km": 6.0,
+          "duration_min": null,
+          "done": false,
+          "source": "garmin_calendar"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-29",
+      "workouts": [
+        {
+          "code": "recovery",
+          "label": "RECOVERY",
+          "name": "회복 조깅 6km + 질주",
+          "detail": "6.0KM",
+          "distance_km": 6.0,
+          "duration_min": null,
+          "done": false,
+          "source": "garmin_calendar"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-31",
+      "workouts": [
+        {
+          "code": "base",
           "label": "BASE RUN",
-          "name": "기초체력 양성",
-          "detail": "5:50"
+          "name": "편한 달리기 6km",
+          "detail": "6.0KM",
+          "distance_km": 6.0,
+          "duration_min": null,
+          "done": false,
+          "source": "garmin_calendar"
         }
       ]
     },
     {
-      "date": "2026-10-16",
+      "date": "2026-11-01",
       "workouts": [
         {
-          "label": "REST",
-          "name": "",
-          "detail": ""
-        }
-      ]
-    },
-    {
-      "date": "2026-10-17",
-      "workouts": [
-        {
-          "label": "SPRINT",
-          "name": "스프린트",
-          "detail": "5X0:15@4:00"
-        }
-      ]
-    },
-    {
-      "date": "2026-10-18",
-      "workouts": [
-        {
-          "label": "RUN",
-          "name": "",
-          "detail": ""
-        }
-      ]
-    },
-    {
-      "date": "2026-10-19",
-      "workouts": [
-        {
-          "label": "REST",
-          "name": "",
-          "detail": ""
-        }
-      ]
-    },
-    {
-      "date": "2026-10-20",
-      "workouts": [
-        {
-          "label": "BASE RUN",
-          "name": "기초체력 양성",
-          "detail": "5:50"
-        }
-      ]
-    },
-    {
-      "date": "2026-10-21",
-      "workouts": [
-        {
-          "label": "BASE RUN",
-          "name": "기초체력 양성",
-          "detail": "5:50"
+          "code": "long",
+          "label": "LONG RUN",
+          "name": "대회 후 장거리 12km",
+          "detail": "12.0KM",
+          "distance_km": 12.0,
+          "duration_min": null,
+          "done": false,
+          "source": "garmin_calendar"
         }
       ]
     }

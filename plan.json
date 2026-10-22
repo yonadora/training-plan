@@ -1,27 +1,27 @@
 {
-  "generated_for": "2026-10-16",
+  "generated_for": "2026-10-22",
   "today": {
-    "date": "2026-10-16",
-    "weekday": "금",
-    "kind": "휴식",
-    "kind_code": "rest",
-    "distance_km": 0.0,
-    "pace": null,
-    "duration_min": null,
+    "date": "2026-10-22",
+    "weekday": "목",
+    "kind": "편한 조깅",
+    "kind_code": "easy",
+    "distance_km": 3.2,
+    "pace": "5:48",
+    "duration_min": 19,
     "level": "green",
     "level_label": "초록",
     "reasons": [
-      "오늘 지표 없음 — 판정 없이 예정대로"
+      "수면 5.0시간 · 심박변이도 균형 · 안정시 심박 49 · 준비도 38"
     ],
-    "garmin_note": null
+    "garmin_note": "가민은 준비도 38으로 낮게 봅니다."
   },
   "week": {
-    "start": "2026-10-12",
-    "planned_km": 39.9,
-    "done_km": 15.1,
+    "start": "2026-10-19",
+    "planned_km": 16.4,
+    "done_km": 22.6,
     "days": [
       {
-        "date": "2026-10-12",
+        "date": "2026-10-19",
         "weekday": "월",
         "kind": "휴식",
         "kind_code": "rest",
@@ -31,17 +31,17 @@
         "done": false
       },
       {
-        "date": "2026-10-13",
+        "date": "2026-10-20",
         "weekday": "화",
-        "kind": "젖산역치",
-        "kind_code": "threshold",
-        "distance_km": 9.3,
-        "pace": "4:55",
+        "kind": "편한 조깅",
+        "kind_code": "easy",
+        "distance_km": 3.2,
+        "pace": "5:48",
         "is_today": false,
-        "done": false
+        "done": true
       },
       {
-        "date": "2026-10-14",
+        "date": "2026-10-21",
         "weekday": "수",
         "kind": "근력",
         "kind_code": "strength",
@@ -51,42 +51,42 @@
         "done": false
       },
       {
-        "date": "2026-10-15",
+        "date": "2026-10-22",
         "weekday": "목",
         "kind": "편한 조깅",
         "kind_code": "easy",
-        "distance_km": 9.3,
+        "distance_km": 3.2,
         "pace": "5:48",
-        "is_today": false,
-        "done": true
+        "is_today": true,
+        "done": false
       },
       {
-        "date": "2026-10-16",
+        "date": "2026-10-23",
         "weekday": "금",
         "kind": "휴식",
         "kind_code": "rest",
         "distance_km": 0.0,
         "pace": null,
-        "is_today": true,
-        "done": false
-      },
-      {
-        "date": "2026-10-17",
-        "weekday": "토",
-        "kind": "인터벌",
-        "kind_code": "interval",
-        "distance_km": 9.3,
-        "pace": "4:25",
         "is_today": false,
         "done": false
       },
       {
-        "date": "2026-10-18",
+        "date": "2026-10-24",
+        "weekday": "토",
+        "kind": "대회",
+        "kind_code": "race",
+        "distance_km": 10.0,
+        "pace": "4:30",
+        "is_today": false,
+        "done": false
+      },
+      {
+        "date": "2026-10-25",
         "weekday": "일",
-        "kind": "롱런",
-        "kind_code": "long",
-        "distance_km": 12.0,
-        "pace": "5:48",
+        "kind": "휴식",
+        "kind_code": "rest",
+        "distance_km": 0.0,
+        "pace": null,
         "is_today": false,
         "done": false
       }
@@ -98,7 +98,57 @@
     "current": "47:13",
     "current_is_default": false,
     "reached": false,
-    "weeks_to_target": null,
-    "note": "기록이 8주치 모이면 도달 시점을 계산합니다. 현재 7주치."
-  }
+    "weeks_to_target": 21,
+    "note": "현재 추세로 약 21주 뒤 도달 예상."
+  },
+  "history": [
+    {
+      "start": "2026-08-31",
+      "km": 20.9,
+      "runs": 4,
+      "avg_pace": "6:23"
+    },
+    {
+      "start": "2026-09-07",
+      "km": 28.8,
+      "runs": 4,
+      "avg_pace": "5:54"
+    },
+    {
+      "start": "2026-09-14",
+      "km": 43.6,
+      "runs": 6,
+      "avg_pace": "5:25"
+    },
+    {
+      "start": "2026-09-21",
+      "km": 19.3,
+      "runs": 3,
+      "avg_pace": "5:52"
+    },
+    {
+      "start": "2026-09-28",
+      "km": 21.5,
+      "runs": 4,
+      "avg_pace": "5:50"
+    },
+    {
+      "start": "2026-10-05",
+      "km": 43.2,
+      "runs": 5,
+      "avg_pace": "6:04"
+    },
+    {
+      "start": "2026-10-12",
+      "km": 20.7,
+      "runs": 3,
+      "avg_pace": "6:07"
+    },
+    {
+      "start": "2026-10-19",
+      "km": 22.6,
+      "runs": 3,
+      "avg_pace": "5:45"
+    }
+  ]
 }

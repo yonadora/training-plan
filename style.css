@@ -83,5 +83,35 @@ ul { margin: 0; padding-left: 18px; }
 .hint { font-size: 12px; color: var(--yellow); }
 .done { color: var(--green); margin-left: 4px; }
 
+.row.past { opacity: 0.55; }
+
+.bars {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  gap: 6px;
+  height: 140px;
+  align-items: end;
+}
+.bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+  min-width: 0;
+}
+.bar-fill {
+  width: 100%;
+  max-width: 28px;
+  min-height: 2px;
+  background: var(--dim);
+  border-radius: 4px 4px 0 0;
+  opacity: 0.6;
+}
+.bar.cur .bar-fill { background: var(--green); opacity: 1; }
+.bar-km { font-size: 11px; color: var(--dim); font-variant-numeric: tabular-nums; }
+.bar-wk { font-size: 10px; color: var(--dim); margin-top: 4px; white-space: nowrap; }
+
 .loading, .error { color: var(--dim); text-align: center; padding: 48px 0; }
 .stale { color: var(--yellow); font-size: 13px; text-align: center; margin-top: 12px; }

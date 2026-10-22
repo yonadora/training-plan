@@ -66,6 +66,65 @@ function goalCard(g) {
     </section>`;
 }
 
+const WD = ['일', '월', '화', '수', '목', '금', '토'];
+
+function garminCard(t) {
+  // today.json 의 days: 가민 코치 플랜 또는 가민 캘린더에 예약한 워크아웃(이번 주 + 다음 주).
+  if (!t || !t.days || !t.days.length) return '';
+  const todayKey = t.generated_for;
+  const rows = t.days.map(d => {
+    const day = new Date(d.date + 'T00:00:00');
+    const past = d.date < todayKey;
+    return d.workouts.map(w => `
+      <div class="row ${d.date === todayKey ? 'today' : ''} ${past ? 'past' : ''}">
+        <span class="wd">${esc(WD[day.getDay()])}</span>
+        <span>${esc(d.date.slice(5).replace('-', '/'))} ${esc(w.name || w.label)}</span>
+        <span class="km">${w.distance_km ? esc(w.distance_km) + 'km' : (w.duration_min ? esc(w.duration_min) + '분' : '')}${w.done ? ' <span class="done">✓</span>' : ''}</span>
+      </div>`).join('');
+  }).join('');
+  const src = { garmin_coach: '가민 코치', garmin_calendar: '가민 캘린더', mixed: '가민 코치·캘린더' }[t.source] || '가민';
+  return `
+    <section class="card">
+      <div class="week-head"><span>가민 일정</span><span>${esc(src)}</span></div>
+      ${rows}
+    </section>`;
+}
+
+function trendCard(h) {
+  if (!h || !h.length) return '';
+  const max = Math.max(...h.map(w => w.km), 1);
+  const bars = h.map((w, i) => {
+    const pct = Math.round(w.km / max * 100);
+    const cur = i === h.length - 1;
+    return `
+      <div class="bar ${cur ? 'cur' : ''}">
+        <span class="bar-km">${w.km > 0 ? esc(w.km) : ''}</span>
+        <span class="bar-fill" style="height:${pct}%"></span>
+        <span class="bar-wk">${esc(w.start.slice(5).replace('-', '/'))}</span>
+      </div>`;
+  }).join('');
+  const last = h[h.length - 1];
+  const prev = h[h.length - 2];
+  const note = prev
+    ? `이번 주 ${esc(last.runs)}회 · 지난주 ${esc(prev.km)}km ${esc(prev.runs)}회${prev.avg_pace ? ` · 평균 ${esc(prev.avg_pace)}/km` : ''}`
+    : '';
+  return `
+    <section class="card">
+      <div class="week-head"><span>주간 거리 (최근 ${h.length}주)</span><span>km</span></div>
+      <div class="bars">${bars}</div>
+      ${note ? `<div class="goal-note">${note}</div>` : ''}
+    </section>`;
+}
+
+async function fetchJson(name) {
+  try {
+    const res = await fetch(name + '?t=' + Date.now());
+    return res.ok ? await res.json() : null;
+  } catch (e) {
+    return null;
+  }
+}
+
 function staleWarning(generatedFor) {
   // 수집기가 며칠 멈춰 있으면 낡은 플랜을 최신인 줄 알고 따라가게 된다.
   const made = new Date(generatedFor + 'T00:00:00');
@@ -75,16 +134,15 @@ function staleWarning(generatedFor) {
 }
 
 async function main() {
-  try {
-    const res = await fetch('plan.json?t=' + Date.now());
-    if (!res.ok) throw new Error(res.status);
-    const p = await res.json();
-    root.innerHTML =
-      todayCard(p.today) + weekCard(p.week) + goalCard(p.goal)
-      + staleWarning(p.generated_for);
-  } catch (e) {
+  const [p, t] = await Promise.all([fetchJson('plan.json'), fetchJson('today.json')]);
+  if (!p) {
     root.innerHTML = '<p class="error">플랜을 불러오지 못했습니다.</p>';
+    return;
   }
+  // 가민 일정은 없어도 된다(파일이 없거나 형식이 옛것). 그때는 카드만 빠진다.
+  root.innerHTML =
+    todayCard(p.today) + garminCard(t) + weekCard(p.week) + trendCard(p.history)
+    + goalCard(p.goal) + staleWarning(p.generated_for);
 }
 
 main();
