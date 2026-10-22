@@ -1,43 +1,31 @@
 {
-  "generated_for": "2026-10-03",
+  "generated_for": "2026-10-04",
   "source": "garmin_coach",
   "plan_name": "Garmin Run Coach와 함께하는 하프마라톤 계획 계획",
   "today": {
-    "date": "2026-10-03",
-    "level": "green",
+    "date": "2026-10-04",
+    "level": null,
     "workouts": [
       {
-        "code": "base",
-        "label": "BASE RUN",
-        "name": "기초체력 양성",
-        "detail": "8.7KM 5:55/KM",
-        "distance_km": 8.7,
-        "duration_min": 51,
+        "code": "long",
+        "label": "LONG RUN",
+        "name": "장거리 달리기",
+        "detail": "13.8KM 5:55/KM",
+        "distance_km": 13.8,
+        "duration_min": 81,
         "pace": "5:55",
         "description": "5:55/km",
         "sport": "running",
         "done": false
-      },
-      {
-        "code": "strength",
-        "label": "CORE",
-        "name": "코어 순환 1",
-        "detail": "25MIN",
-        "distance_km": null,
-        "duration_min": 25,
-        "pace": null,
-        "description": "",
-        "sport": "strength_training",
-        "done": false
       }
     ],
-    "kind": "기초체력 양성",
-    "kind_code": "base",
-    "label": "BASE RUN",
-    "detail": "8.7KM 5:55/KM",
-    "distance_km": 8.7,
+    "kind": "장거리 달리기",
+    "kind_code": "long",
+    "label": "LONG RUN",
+    "detail": "13.8KM 5:55/KM",
+    "distance_km": 13.8,
     "pace": "5:55",
-    "duration_min": 51
+    "duration_min": 81
   },
   "days": [
     {
