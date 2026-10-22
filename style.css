@@ -116,3 +116,5 @@ ul { margin: 0; padding-left: 18px; }
 .loading, .error { color: var(--dim); text-align: center; padding: 48px 0; }
 .stale { color: var(--yellow); font-size: 13px; text-align: center; margin-top: 12px; }
 .today-done { color: var(--green); font-size: 15px; font-weight: 600; margin-top: 8px; }
+.ran { color: var(--dim); margin-left: 4px; }
+.plan-km { display: block; font-size: 11px; color: var(--dim); font-weight: 400; text-align: right; }

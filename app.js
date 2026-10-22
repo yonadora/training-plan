@@ -36,12 +36,20 @@ function todayCard(t) {
 }
 
 function weekCard(w) {
-  const rows = w.days.map(d => `
+  // 뛴 날은 실제 거리를, 계획 거리는 옆에 작게. 계획에 없던 날 뛴 것도 보인다.
+  const rows = w.days.map(d => {
+    const ran = d.actual_km > 0;
+    const km = ran
+      ? `${esc(+d.actual_km.toFixed(1))}km <span class="${d.done ? 'done' : 'ran'}">✓</span>`
+        + (d.distance_km > 0 ? `<span class="plan-km">계획 ${esc(d.distance_km)}</span>` : '<span class="plan-km">계획 외</span>')
+      : (d.distance_km > 0 ? esc(d.distance_km) + 'km' : '');
+    return `
     <div class="row ${d.is_today ? 'today' : ''}">
       <span class="wd">${esc(d.weekday)}</span>
       <span>${esc(d.kind)}${d.pace ? ` · ${esc(d.pace)}` : ''}</span>
-      <span class="km">${d.distance_km > 0 ? esc(d.distance_km) + 'km' : ''}${d.done ? ' <span class="done">✓</span>' : ''}</span>
-    </div>`).join('');
+      <span class="km">${km}</span>
+    </div>`;
+  }).join('');
 
   return `
     <section class="card">
