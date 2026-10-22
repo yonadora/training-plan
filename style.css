@@ -144,3 +144,9 @@ ul { margin: 0; padding-left: 18px; }
 .coach-head { font-size: 14px; font-weight: 700; margin-bottom: 8px; }
 .coach ul { font-size: 14px; }
 .coach li { margin: 4px 0; }
+
+.card.race { border-left: 3px solid var(--green); }
+.race-goal { font-size: 18px; font-weight: 700; margin: 4px 0 10px; }
+.race-sub { font-size: 13px; color: var(--dim); margin: 12px 0 4px; font-weight: 600; }
+.race ul { font-size: 14px; }
+.race li { margin: 4px 0; }

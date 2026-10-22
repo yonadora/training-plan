@@ -74,6 +74,36 @@ function coachCard(p) {
     </section>`;
 }
 
+function raceCard(r) {
+  // 대회 3일 전~당일에만 plan.json 에 race_strategy 가 들어온다.
+  if (!r) return '';
+  const dday = r.days_left === 0 ? '오늘이 대회다냥' : `대회 ${r.days_left}일 전이다냥`;
+  const reality = r.gap_sec > 0
+    ? `훈련 기록으로 본 예상 기록(추정)은 ${r.predicted}다냥. 목표 ${r.target}보다 ${Math.floor(r.gap_sec / 60)}분 ${r.gap_sec % 60}초 느리다냥. 초반에 무리하면 후반에 무너진다냥.`
+    : `예상 기록(추정) ${r.predicted}로 목표 ${r.target}은 해볼 만하다냥. 그래도 초반 과속은 금지다냥.`;
+  const lines = [
+    reality,
+    `전반 ${r.first_half_km}km: ${r.first_half_pace[0]}~${r.first_half_pace[1]}/km로 참는다냥. 첫 1km가 ${r.first_km_floor}보다 빠르면 무조건 늦춘다냥.`,
+    `${r.first_half_km}km 지점을 ${r.half_split} 안팎으로 지났고 숨이 남았으면, 후반은 ${r.second_half_pace[0]}~${r.second_half_pace[1]}/km로 올린다냥.`,
+    `${r.first_half_km}km에서 이미 힘들면 플랜 B다냥. ${r.plan_b_pace}/km를 끝까지 지킨다냥.`,
+    '마지막 1km에서 남은 힘을 다 쓴다냥.',
+  ];
+  const prep = [
+    '전날 밤 7시간 이상 잔다냥. 시계는 폰과 동기화해 둔다냥.',
+    '아침은 출발 2~3시간 전에, 평소 먹던 것으로 먹는다냥.',
+    '출발 30분 전 조깅 10분, 그다음 20초 질주 4회로 몸을 깨운다냥.',
+    '가슴 통증·어지럼·찌르는 통증이 오면 기록이고 뭐고 바로 멈춘다냥.',
+  ];
+  return `
+    <section class="card race">
+      <div class="coach-head"><span class="cat">🏁</span> 냥코치 대회 전략 · ${esc(dday)}</div>
+      <div class="race-goal">${esc(r.distance_km)}km 목표 ${esc(r.target)} · 평균 ${esc(r.goal_pace)}/km</div>
+      <ul>${lines.map(l => `<li>${esc(l)}</li>`).join('')}</ul>
+      <div class="race-sub">준비</div>
+      <ul>${prep.map(l => `<li>${esc(l)}</li>`).join('')}</ul>
+    </section>`;
+}
+
 function todayCard(t) {
   const amount = t.distance_km > 0
     ? `총 ${t.distance_km}km` + (t.duration_min ? ` · 약 ${t.duration_min}분` : '')
@@ -230,7 +260,7 @@ async function main() {
   // 가민 일정은 없어도 된다(파일이 없거나 형식이 옛것). 그때는 카드만 빠진다.
   root.innerHTML =
     '<div class="byline">🐱 작성: 냥코치</div>'
-    + coachCard(p) + todayCard(p.today) + garminCard(t) + weekCard(p.week) + trendCard(p.history)
+    + raceCard(p.race_strategy) + coachCard(p) + todayCard(p.today) + garminCard(t) + weekCard(p.week) + trendCard(p.history)
     + goalCard(p.goal) + staleWarning(p.generated_for);
 }
 
