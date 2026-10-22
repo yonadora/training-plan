@@ -118,3 +118,23 @@ ul { margin: 0; padding-left: 18px; }
 .today-done { color: var(--green); font-size: 15px; font-weight: 600; margin-top: 8px; }
 .ran { color: var(--dim); margin-left: 4px; }
 .plan-km { display: block; font-size: 11px; color: var(--dim); font-weight: 400; text-align: right; }
+
+.wrow {
+  display: grid;
+  grid-template-columns: 24px 1fr 44px 44px 18px;
+  gap: 6px;
+  padding: 7px 0;
+  font-size: 15px;
+  align-items: baseline;
+}
+.wrow.today { color: var(--text); font-weight: 600; }
+.wrow:not(.today) { color: var(--dim); }
+.wrow .wk { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.wrow .num { text-align: right; font-variant-numeric: tabular-nums; }
+.wrow .act { color: var(--text); }
+.wrow.whead { font-size: 11px; padding: 0 0 2px; }
+.mk { text-align: center; font-weight: 700; }
+.mk.ok { color: var(--green); }
+.mk.warn { color: var(--yellow); }
+.mk.bad { color: var(--red); }
+.mk.extra { color: var(--dim); }

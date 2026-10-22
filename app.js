@@ -37,27 +37,39 @@ function todayCard(t) {
 
 function weekCard(w) {
   // 뛴 날은 실제 거리를, 계획 거리는 옆에 작게. 계획에 없던 날 뛴 것도 보인다.
-  const rows = w.days.map(d => {
+  // 계획과 실제를 나란히. 표시: ✓ 계획의 80% 이상(초록) / △ 덜 뜀(노랑) / ✗ 지난 날인데 안 뜀(빨강).
+  // 계획 없이 뛴 날은 회색 ✓. 오늘은 뛰었을 때만 표시한다(아직 하루가 남았다).
+  const todayIdx = w.days.findIndex(d => d.is_today);
+  const rows = w.days.map((d, i) => {
+    const past = todayIdx >= 0 ? i < todayIdx : false;
+    const planned = d.distance_km > 0;
     const ran = d.actual_km > 0;
-    const km = ran
-      ? `${esc(+d.actual_km.toFixed(1))}km <span class="${d.done ? 'done' : 'ran'}">✓</span>`
-        + (d.distance_km > 0 ? `<span class="plan-km">계획 ${esc(d.distance_km)}</span>` : '<span class="plan-km">계획 외</span>')
-      : (d.distance_km > 0 ? esc(d.distance_km) + 'km' : '');
+    let mark = '';
+    if (planned && d.done) mark = '<span class="mk ok">✓</span>';
+    else if (planned && ran) mark = '<span class="mk warn">△</span>';
+    else if (planned && past) mark = '<span class="mk bad">✗</span>';
+    else if (ran) mark = '<span class="mk extra">✓</span>';
     return `
-    <div class="row ${d.is_today ? 'today' : ''}">
+    <div class="wrow ${d.is_today ? 'today' : ''}">
       <span class="wd">${esc(d.weekday)}</span>
-      <span>${esc(d.kind)}${d.pace ? ` · ${esc(d.pace)}` : ''}</span>
-      <span class="km">${km}</span>
+      <span class="wk">${esc(d.kind)}${d.pace ? ` · ${esc(d.pace)}` : ''}</span>
+      <span class="num">${planned ? esc(d.distance_km) : ''}</span>
+      <span class="num act">${ran ? esc(+d.actual_km.toFixed(1)) : (planned && past ? '0' : '')}</span>
+      ${mark || '<span></span>'}
     </div>`;
   }).join('');
+  const head = `
+    <div class="wrow whead">
+      <span></span><span></span><span class="num">계획</span><span class="num">실제</span><span></span>
+    </div>`;
 
   return `
     <section class="card">
       <div class="week-head">
         <span>이번 주</span>
-        <span>${esc(w.done_km)} / ${esc(w.planned_km)} km</span>
+        <span>실제 ${esc(w.done_km)} / 계획 ${esc(w.planned_km)} km</span>
       </div>
-      ${rows}
+      ${head}${rows}
     </section>`;
 }
 
