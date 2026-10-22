@@ -30,6 +30,7 @@ function todayCard(t) {
       <div class="kind">${esc(t.kind)}</div>
       ${pace ? `<div class="pace">${esc(pace)}</div>` : ''}
       ${amount ? `<div class="amount">${esc(amount)}</div>` : ''}
+      ${t.done ? `<div class="today-done">✓ 오늘 ${esc(t.done_km)}km 뛰었습니다</div>` : ''}
       ${reasons}
     </section>`;
 }

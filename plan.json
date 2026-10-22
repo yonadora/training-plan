@@ -13,7 +13,9 @@
     "reasons": [
       "수면 5.0시간 · 심박변이도 균형 · 안정시 심박 49 · 준비도 38"
     ],
-    "garmin_note": "가민은 준비도 38으로 낮게 봅니다."
+    "garmin_note": "가민은 준비도 38으로 낮게 봅니다.",
+    "done_km": 6.01,
+    "done": true
   },
   "week": {
     "start": "2026-10-19",
@@ -58,7 +60,7 @@
         "distance_km": 3.2,
         "pace": "5:48",
         "is_today": true,
-        "done": false
+        "done": true
       },
       {
         "date": "2026-10-23",
