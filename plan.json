@@ -38,7 +38,8 @@
         "strides": 0,
         "is_today": false,
         "done": false,
-        "actual_km": 0
+        "actual_km": 0,
+        "actual_min": 0
       },
       {
         "date": "2026-10-19",
@@ -50,7 +51,8 @@
         "strides": 0,
         "is_today": false,
         "done": false,
-        "actual_km": 8.01
+        "actual_km": 8.01,
+        "actual_min": 49
       },
       {
         "date": "2026-10-20",
@@ -62,7 +64,8 @@
         "strides": 0,
         "is_today": false,
         "done": true,
-        "actual_km": 8.6
+        "actual_km": 8.6,
+        "actual_min": 46
       },
       {
         "date": "2026-10-21",
@@ -74,7 +77,8 @@
         "strides": 0,
         "is_today": false,
         "done": false,
-        "actual_km": 0
+        "actual_km": 0,
+        "actual_min": 0
       },
       {
         "date": "2026-10-22",
@@ -86,7 +90,8 @@
         "strides": 0,
         "is_today": false,
         "done": true,
-        "actual_km": 6.01
+        "actual_km": 6.01,
+        "actual_min": 35
       },
       {
         "date": "2026-10-23",
@@ -98,7 +103,8 @@
         "strides": 0,
         "is_today": true,
         "done": false,
-        "actual_km": 0
+        "actual_km": 0,
+        "actual_min": 0
       },
       {
         "date": "2026-10-24",
@@ -110,9 +116,11 @@
         "strides": 0,
         "is_today": false,
         "done": false,
-        "actual_km": 0
+        "actual_km": 0,
+        "actual_min": 0
       }
-    ]
+    ],
+    "actual_min": 130
   },
   "goal": {
     "distance_km": 10.0,

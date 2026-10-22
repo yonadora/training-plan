@@ -130,6 +130,11 @@ function todayCard(t) {
     </section>`;
 }
 
+// 운동 시간: 60분 미만은 "47분", 넘으면 "1시간 5분"
+function minText(m) {
+  return m < 60 ? `${m}분` : `${Math.floor(m / 60)}시간${m % 60 ? ` ${m % 60}분` : ''}`;
+}
+
 function weekCard(w) {
   // 뛴 날은 실제 거리를, 계획 거리는 옆에 작게. 계획에 없던 날 뛴 것도 보인다.
   // 계획과 실제를 나란히. 표시: ✓ 계획의 80% 이상(초록) / △ 덜 뜀(노랑) / ✗ 지난 날인데 안 뜀(빨강).
@@ -148,8 +153,9 @@ function weekCard(w) {
     <div class="wrow ${d.is_today ? 'today' : ''}">
       <span class="wd">${esc(d.weekday)}</span>
       <span class="wk">${esc(d.kind)}${d.strides ? `+질주` : ''}${d.pace ? ` · ${esc(d.pace)}` : ''}</span>
-      <span class="num">${planned ? esc(d.distance_km) : ''}</span>
-      <span class="num act">${ran ? esc(+d.actual_km.toFixed(1)) : (planned && past ? '0' : '')}</span>
+      <span class="num">${planned ? esc(d.distance_km) + 'km' : ''}</span>
+      <span class="num act">${ran ? esc(+d.actual_km.toFixed(1)) + 'km' : (planned && past ? '0km' : '')}${
+        d.actual_min ? `<span class="act-min">${esc(minText(d.actual_min))}</span>` : ''}</span>
       ${mark || '<span></span>'}
     </div>`;
   }).join('');
@@ -162,7 +168,7 @@ function weekCard(w) {
     <section class="card">
       <div class="week-head">
         <span>이번 주</span>
-        <span>실제 ${esc(w.done_km)} / 계획 ${esc(w.planned_km)} km</span>
+        <span>실제 ${esc(w.done_km)}km${w.actual_min ? ` · ${esc(minText(w.actual_min))}` : ''} / 계획 ${esc(w.planned_km)}km</span>
       </div>
       ${head}${rows}
       ${w.first_day && w.first_day.first_weekday

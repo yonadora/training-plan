@@ -121,7 +121,7 @@ ul { margin: 0; padding-left: 18px; }
 
 .wrow {
   display: grid;
-  grid-template-columns: 24px 1fr 44px 44px 18px;
+  grid-template-columns: 24px 1fr 52px 58px 18px;
   gap: 6px;
   padding: 7px 0;
   font-size: 15px;
@@ -150,3 +150,5 @@ ul { margin: 0; padding-left: 18px; }
 .race-sub { font-size: 13px; color: var(--dim); margin: 12px 0 4px; font-weight: 600; }
 .race ul { font-size: 14px; }
 .race li { margin: 4px 0; }
+
+.act-min { display: block; font-size: 11px; color: var(--dim); font-weight: 400; }
