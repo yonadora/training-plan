@@ -8,12 +8,18 @@
   <title>냥코치 훈련 플랜</title>
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="apple-touch-icon" href="icon-180.png">
-  <link rel="stylesheet" href="style.css">
+  <!-- 화면 파일(style.css, app.js)은 1분 단위 번호를 붙여 받는다. 번호 없이 받으면
+       폰(특히 홈 화면 앱)이 옛 파일을 계속 써서 새 카드가 안 보였다(2026-10-23). -->
+  <script>
+    window.ASSET_V = Math.floor(Date.now() / 60000);
+    document.write('<link rel="stylesheet" href="style.css?v=' + window.ASSET_V + '">');
+  </script>
+  <noscript><link rel="stylesheet" href="style.css"></noscript>
 </head>
 <body>
   <main id="root">
     <p class="loading">불러오는 중이다냥…</p>
   </main>
-  <script src="app.js"></script>
+  <script>document.write('<script src="app.js?v=' + window.ASSET_V + '"><\/script>');</script>
 </body>
 </html>
