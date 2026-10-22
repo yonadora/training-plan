@@ -43,51 +43,6 @@
           "source": "garmin_calendar"
         }
       ]
-    },
-    {
-      "date": "2026-10-27",
-      "workouts": [
-        {
-          "code": "recovery",
-          "label": "RECOVERY",
-          "name": "대회 후 회복 달리기 6km",
-          "detail": "6.0KM",
-          "distance_km": 6.0,
-          "duration_min": null,
-          "done": false,
-          "source": "garmin_calendar"
-        }
-      ]
-    },
-    {
-      "date": "2026-10-29",
-      "workouts": [
-        {
-          "code": "recovery",
-          "label": "RECOVERY",
-          "name": "회복 조깅 6km + 질주",
-          "detail": "6.0KM",
-          "distance_km": 6.0,
-          "duration_min": null,
-          "done": false,
-          "source": "garmin_calendar"
-        }
-      ]
-    },
-    {
-      "date": "2026-10-31",
-      "workouts": [
-        {
-          "code": "base",
-          "label": "BASE RUN",
-          "name": "편한 달리기 6km",
-          "detail": "6.0KM",
-          "distance_km": 6.0,
-          "duration_min": null,
-          "done": false,
-          "source": "garmin_calendar"
-        }
-      ]
     }
   ]
 }
