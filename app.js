@@ -92,7 +92,7 @@ function todayCard(t) {
         <span>${esc(t.date.slice(5).replace('-', '월 '))}일 ${esc(t.weekday)}</span>
         <span class="dot ${esc(t.level)}">● ${esc(t.level_label)}</span>
       </div>
-      <div class="kind">${esc(t.kind)}</div>
+      <div class="kind">${esc(t.kind)}${t.strides ? ` + 질주 ${esc(t.strides)}회` : ''}</div>
       ${pace ? `<div class="pace">${esc(pace)}</div>` : ''}
       ${amount ? `<div class="amount">${esc(amount)}</div>` : ''}
       ${t.done ? `<div class="today-done">✓ 오늘 ${esc(t.done_km)}km 뛰었다냥</div>` : ''}
@@ -117,7 +117,7 @@ function weekCard(w) {
     return `
     <div class="wrow ${d.is_today ? 'today' : ''}">
       <span class="wd">${esc(d.weekday)}</span>
-      <span class="wk">${esc(d.kind)}${d.pace ? ` · ${esc(d.pace)}` : ''}</span>
+      <span class="wk">${esc(d.kind)}${d.strides ? `+질주` : ''}${d.pace ? ` · ${esc(d.pace)}` : ''}</span>
       <span class="num">${planned ? esc(d.distance_km) : ''}</span>
       <span class="num act">${ran ? esc(+d.actual_km.toFixed(1)) : (planned && past ? '0' : '')}</span>
       ${mark || '<span></span>'}
@@ -135,6 +135,8 @@ function weekCard(w) {
         <span>실제 ${esc(w.done_km)} / 계획 ${esc(w.planned_km)} km</span>
       </div>
       ${head}${rows}
+      ${w.first_day && w.first_day.first_weekday
+        ? `<p class="hint">한 주는 ${esc(w.first_day.first_weekday)}요일부터 (${esc(w.first_day.source)})</p>` : ''}
     </section>`;
 }
 
