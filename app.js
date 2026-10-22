@@ -1,5 +1,7 @@
 // plan.json 을 읽어 화면을 그린다. 계산은 하지 않는다.
 // 계산은 전부 PC에서 끝났고, 여기는 보여주기만 한다.
+// 화자는 냥코치(고양이 러닝 코치)다. 문장은 '냥'으로 끝낸다(2026-10-22 사용자 결정).
+// 냥코치 한마디는 plan.json 숫자로만 만든 규칙 기반 문장이다.
 
 const root = document.getElementById('root');
 
@@ -9,14 +11,77 @@ function esc(s) {
   }[c]));
 }
 
+// 계산 쪽(PC)에서 온 존댓말 문장을 냥코치 말투로. src/gtp/report.py 의 nyang() 과 같은 규칙.
+const NYANG_ENDINGS = [
+  ['했습니다.', '했다냥.'], ['합니다.', '한다냥.'], ['봅니다.', '본다냥.'],
+  ['없습니다.', '없다냥.'], ['있습니다.', '있다냥.'], ['입니다.', '이다냥.'],
+  ['습니다.', '다냥.'], ['예상.', '예상이다냥.'],
+];
+
+function nyang(text) {
+  return String(text ?? '').trim().split(/(?<=\.)\s+/).filter(Boolean).map(s => {
+    for (const [a, b] of NYANG_ENDINGS) {
+      if (s.endsWith(a)) { s = s.slice(0, -a.length) + b; break; }
+    }
+    if (!s.endsWith('냥') && !s.endsWith('냥.')) {
+      // 마침표 없는 요약 줄(예: "수면 5.0시간 · 준비도 38")은 그대로 둔다.
+      if (!s.endsWith('.')) return s;
+      s = s.slice(0, -1) + '다냥.';
+    }
+    return s;
+  }).join(' ');
+}
+
+function daysUntilRace(p) {
+  const race = (p.week.days || []).find(d => d.kind_code === 'race');
+  if (!race) return null;
+  const ms = new Date(race.date + 'T00:00:00') - new Date(p.today.date + 'T00:00:00');
+  return Math.round(ms / 86400000);
+}
+
+function coachCard(p) {
+  const t = p.today;
+  const lines = [];
+  const planned = t.distance_km || 0;
+  const ratio = planned > 0 && t.done ? Math.round(t.done_km / planned * 100) : null;
+  const dRace = daysUntilRace(p);
+
+  if (t.done && planned > 0) {
+    lines.push(`오늘 ${t.done_km}km 뛰었다냥. 처방(${t.kind} ${planned}km)의 ${ratio}%다냥.`);
+    if (ratio < 80) lines.push('처방의 80%도 못 채웠다냥. 이유를 대 보라냥.');
+    else if (ratio > 130 && dRace !== null && dRace >= 0 && dRace <= 7)
+      lines.push('테이퍼 기간에 처방보다 한참 더 뛰었다냥. 대회 전엔 피로를 빼야 한다냥. 남은 날은 처방 거리를 넘기지 마라냥.');
+    else if (ratio > 130) lines.push('처방보다 30% 넘게 더 뛰었다냥. 욕심은 부상으로 돌아온다냥.');
+    else lines.push('오늘 몫은 했다냥. 칭찬은 기록이 오르면 해 주겠다냥.');
+  } else if (t.done) {
+    lines.push(`쉬는 날인데 ${t.done_km}km 뛰었다냥. 회복도 훈련이다냥.`);
+  } else if (planned > 0) {
+    lines.push(`오늘 처방은 ${t.kind} ${planned}km${t.pace ? `, ${t.pace}/km` : ''}다냥. 핑계 없이 뛰라냥.`);
+  } else {
+    lines.push('오늘은 쉬는 날이다냥. 제대로 쉬는 것도 실력이다냥.');
+  }
+
+  if (t.level === 'red') lines.push('컨디션 신호가 빨강이다냥. 오늘은 강도를 빼라냥. 통증이 있으면 멈추고 전문가와 상담하라냥.');
+  else if (t.level === 'yellow') lines.push('컨디션 신호가 노랑이다냥. 강도를 한 단계 낮췄다냥.');
+
+  if (dRace !== null && dRace > 0 && dRace <= 14) lines.push(`대회까지 ${dRace}일 남았다냥.`);
+  else if (dRace === 0) lines.push('오늘이 대회다냥. 연습한 만큼만 뛰고 오라냥.');
+
+  return `
+    <section class="card coach">
+      <div class="coach-head"><span class="cat">🐱</span> 냥코치 한마디</div>
+      <ul>${lines.map(l => `<li>${esc(l)}</li>`).join('')}</ul>
+    </section>`;
+}
+
 function todayCard(t) {
   const amount = t.distance_km > 0
     ? `총 ${t.distance_km}km` + (t.duration_min ? ` · 약 ${t.duration_min}분` : '')
     : '';
   const pace = t.pace ? `${t.pace} /km` : '';
-  const lines = t.reasons.slice();
+  const lines = t.reasons.map(nyang);
   // 가민이 우리와 다르게 본 날에만 붙는다. 참고용이라 목록 끝에 둔다.
-  if (t.garmin_note) lines.push(t.garmin_note);
+  if (t.garmin_note) lines.push(nyang(t.garmin_note));
   const reasons = lines.length
     ? `<div class="reasons"><ul>${lines.map(r => `<li>${esc(r)}</li>`).join('')}</ul></div>`
     : '';
@@ -30,7 +95,7 @@ function todayCard(t) {
       <div class="kind">${esc(t.kind)}</div>
       ${pace ? `<div class="pace">${esc(pace)}</div>` : ''}
       ${amount ? `<div class="amount">${esc(amount)}</div>` : ''}
-      ${t.done ? `<div class="today-done">✓ 오늘 ${esc(t.done_km)}km 뛰었습니다</div>` : ''}
+      ${t.done ? `<div class="today-done">✓ 오늘 ${esc(t.done_km)}km 뛰었다냥</div>` : ''}
       ${reasons}
     </section>`;
 }
@@ -77,13 +142,13 @@ function goalCard(g) {
   // 쓸 만한 기록이 없어 기본값으로 계산한 날은 그 사실을 붙인다.
   // 처음 쓰는 사람이 기본값을 자기 실력으로 오해하지 않게.
   const current = g.current_is_default
-    ? `${esc(g.current)} <span class="hint">(기록 부족, 기본값)</span>`
+    ? `${esc(g.current)} <span class="hint">(기록이 모자라 기본값이다냥)</span>`
     : esc(g.current);
   return `
     <section class="card">
       <div class="goal-line"><span>목표</span><span>${esc(g.distance_km)}km ${esc(g.target)}</span></div>
       <div class="goal-line"><span>현재 실력 예상</span><span>${current}</span></div>
-      <div class="goal-note">${esc(g.note)}</div>
+      <div class="goal-note">${esc(nyang(g.note))}</div>
     </section>`;
 }
 
@@ -151,18 +216,19 @@ function staleWarning(generatedFor) {
   const made = new Date(generatedFor + 'T00:00:00');
   const days = Math.floor((Date.now() - made.getTime()) / 86400000);
   if (days < 1) return '';
-  return `<p class="stale">${days}일 전에 만든 플랜입니다. PC에서 갱신이 안 되고 있습니다.</p>`;
+  return `<p class="stale">${days}일 전에 만든 플랜이다냥. PC에서 갱신이 안 되고 있다냥.</p>`;
 }
 
 async function main() {
   const [p, t] = await Promise.all([fetchJson('plan.json'), fetchJson('today.json')]);
   if (!p) {
-    root.innerHTML = '<p class="error">플랜을 불러오지 못했습니다.</p>';
+    root.innerHTML = '<p class="error">플랜을 못 불러왔다냥.</p>';
     return;
   }
   // 가민 일정은 없어도 된다(파일이 없거나 형식이 옛것). 그때는 카드만 빠진다.
   root.innerHTML =
-    todayCard(p.today) + garminCard(t) + weekCard(p.week) + trendCard(p.history)
+    '<div class="byline">🐱 작성: 냥코치</div>'
+    + coachCard(p) + todayCard(p.today) + garminCard(t) + weekCard(p.week) + trendCard(p.history)
     + goalCard(p.goal) + staleWarning(p.generated_for);
 }
 
