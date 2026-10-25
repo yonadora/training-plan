@@ -61,6 +61,7 @@ function coachCard(p) {
     lines.push('오늘은 쉬는 날이다냥. 제대로 쉬는 것도 실력이다냥.');
   }
 
+  if (t.kind_code === 'check' && !t.done) lines.push('오늘은 기록 측정이다냥. 처음엔 참고 마지막에 올려라냥. 시계 자동 일시정지는 끄라냥.');
   if (t.level === 'red') lines.push('컨디션 신호가 빨강이다냥. 오늘은 강도를 빼라냥. 통증이 있으면 멈추고 전문가와 상담하라냥.');
   else if (t.level === 'yellow') lines.push('컨디션 신호가 노랑이다냥. 강도를 한 단계 낮췄다냥.');
 
@@ -77,8 +78,11 @@ function coachCard(p) {
 function raceCard(r) {
   // 대회 3일 전~당일에만 plan.json 에 race_strategy 가 들어온다.
   if (!r) return '';
-  const dday = r.days_left === 0 ? '오늘이 대회다냥' : `대회 ${r.days_left}일 전이다냥`;
-  const reality = r.gap_sec > 0
+  const what = r.kind === 'check' ? '기록 측정' : '대회';
+  const dday = r.days_left === 0 ? `오늘이 ${what}다냥` : `${what} ${r.days_left}일 전이다냥`;
+  const reality = r.kind === 'check'
+    ? `측정 목표 ${r.target}는 지금 실력 환산에 지구력 보정 4%를 붙인 값이다냥(추정). 처음 달리는 거리라 15km까지는 참는다냥.`
+    : r.gap_sec > 0
     ? `훈련 기록으로 본 예상 기록(추정)은 ${r.predicted}다냥. 목표 ${r.target}보다 ${Math.floor(r.gap_sec / 60)}분 ${r.gap_sec % 60}초 느리다냥. 초반에 무리하면 후반에 무너진다냥.`
     : `예상 기록(추정) ${r.predicted}로 목표 ${r.target}은 해볼 만하다냥. 그래도 초반 과속은 금지다냥.`;
   const lines = [
@@ -96,7 +100,7 @@ function raceCard(r) {
   ];
   return `
     <section class="card race">
-      <div class="coach-head"><span class="cat">🏁</span> 냥코치 대회 전략 · ${esc(dday)}</div>
+      <div class="coach-head"><span class="cat">🏁</span> 냥코치 ${esc(what)} 전략 · ${esc(dday)}</div>
       <div class="race-goal">${esc(r.distance_km)}km 목표 ${esc(r.target)} · 평균 ${esc(r.goal_pace)}/km</div>
       <ul>${lines.map(l => `<li>${esc(l)}</li>`).join('')}</ul>
       <div class="race-sub">준비</div>
@@ -139,6 +143,7 @@ function weekCard(w) {
   // 뛴 날은 실제 거리를, 계획 거리는 옆에 작게. 계획에 없던 날 뛴 것도 보인다.
   // 계획과 실제를 나란히. 표시: ✓ 계획의 80% 이상(초록) / △ 덜 뜀(노랑) / ✗ 지난 날인데 안 뜀(빨강).
   // 계획 없이 뛴 날은 회색 ✓. 오늘은 뛰었을 때만 표시한다(아직 하루가 남았다).
+  // 지난 날 계획은 그날 저장한 확정 처방(plan.json days[].fixed). 저장 전 날은 recomputed 라 * 를 붙인다.
   const todayIdx = w.days.findIndex(d => d.is_today);
   const rows = w.days.map((d, i) => {
     const past = todayIdx >= 0 ? i < todayIdx : false;
@@ -152,7 +157,8 @@ function weekCard(w) {
     return `
     <div class="wrow ${d.is_today ? 'today' : ''}">
       <span class="wd">${esc(d.weekday)}</span>
-      <span class="wk">${esc(d.kind)}${d.strides ? `+질주` : ''}${d.pace ? ` · ${esc(d.pace)}` : ''}</span>
+      <span class="wk">${esc(d.kind)}${d.strides ? `+질주` : ''}${d.pace ? ` · ${esc(d.pace)}` : ''}${
+        d.recomputed ? '<span class="rc">*</span>' : ''}</span>
       <span class="num">${planned ? esc(d.distance_km) + 'km' : ''}</span>
       <span class="num act">${ran ? esc(+d.actual_km.toFixed(1)) + 'km' : (planned && past ? '0km' : '')}${
         d.actual_min ? `<span class="act-min">${esc(minText(d.actual_min))}</span>` : ''}</span>
@@ -171,12 +177,22 @@ function weekCard(w) {
         <span>실제 ${esc(w.done_km)}km${w.actual_min ? ` · ${esc(minText(w.actual_min))}` : ''} / 계획 ${esc(w.planned_km)}km</span>
       </div>
       ${head}${rows}
+      ${w.days.some(d => d.recomputed)
+        ? '<p class="hint">* 그날 저장된 처방이 없어 지금 규칙으로 다시 계산한 계획이다냥. 그때 받은 처방과 다를 수 있다냥.</p>' : ''}
       ${w.first_day && w.first_day.first_weekday
         ? `<p class="hint">한 주는 ${esc(w.first_day.first_weekday)}요일부터 (${esc(w.first_day.source)})</p>` : ''}
     </section>`;
 }
 
-function goalCard(g) {
+function garminPredLine(gp, km) {
+  // 가민 레이스 예측(참고). 가민 계산식은 비공개라 엔진 예상과 나란히 보여 준다냥.
+  if (!gp) return '';
+  const key = km === 5 ? '5k' : km === 10 ? '10k' : (Math.abs(km - 21.0975) < 0.01 ? 'half' : null);
+  if (!key || !gp[key]) return '';
+  return `<div class="goal-line"><span>가민 예측 (참고)</span><span>${esc(gp[key])}</span></div>`;
+}
+
+function goalCard(g, gp) {
   // 쓸 만한 기록이 없어 기본값으로 계산한 날은 그 사실을 붙인다.
   // 처음 쓰는 사람이 기본값을 자기 실력으로 오해하지 않게.
   const current = g.current_is_default
@@ -186,7 +202,26 @@ function goalCard(g) {
     <section class="card">
       <div class="goal-line"><span>목표</span><span>${esc(g.distance_km)}km ${esc(g.target)}</span></div>
       <div class="goal-line"><span>현재 실력 예상</span><span>${current}</span></div>
+      ${garminPredLine(gp, Number(g.distance_km))}
       <div class="goal-note">${esc(nyang(g.note))}</div>
+    </section>`;
+}
+
+function longGoalCard(lg, gp) {
+  // 장기목표(2026-10-24): 처방에는 안 쓰고 진행 상황만 보여 준다냥.
+  if (!lg) return '';
+  const gap = lg.gap_sec;
+  const speed = gap === null || gap === undefined ? ''
+    : gap <= 0 ? '속도는 이미 목표보다 빠르다냥. 남은 건 그 거리를 버티는 지구력이다냥.'
+    : `속도로도 아직 ${Math.round(gap / 60)}분쯤 모자라다냥.`;
+  const share = Math.round((lg.longest_share || 0) * 100);
+  return `
+    <section class="card">
+      <div class="goal-line"><span>장기목표</span><span>${esc(lg.name || '')} ${esc(lg.target)}</span></div>
+      <div class="goal-line"><span>지금 속도로 환산</span><span>${esc(lg.predicted || '-')}</span></div>
+      ${garminPredLine(gp, Number(lg.distance_km))}
+      <div class="goal-line"><span>최근 90일 최장</span><span>${esc(lg.longest_km)}km (${share}%)</span></div>
+      <div class="goal-note">${esc(speed)} 환산은 지구력이 충분하다는 가정이라 실제보다 빠르게 나온다냥.</div>
     </section>`;
 }
 
@@ -249,6 +284,16 @@ async function fetchJson(name) {
   }
 }
 
+function watchSyncLine(w) {
+  // 시계 자동 반영 요약(날짜·건수만, 공개 저장소라 계정 번호는 없다냥).
+  if (!w || !w.status) return '';
+  const label = { applied: '시계에 반영했다냥', noop: '시계는 이미 처방과 같다냥', unchanged: '처방이 안 바뀌어 시계도 그대로다냥',
+    skipped: '오늘은 시계 반영을 건너뛰었다냥', error: '시계 반영이 실패했다냥. 내일 다시 한다냥', partial: '시계에 일부만 반영됐다냥',
+    off: '시계 자동 반영이 꺼져 있다냥' }[w.status] || '';
+  if (!label) return '';
+  return `<p class="stale">시계 반영 ${esc(w.date || '')} · ${esc(label)} (변경 ${esc(w.changes || 0)}건)</p>`;
+}
+
 function staleWarning(generatedFor) {
   // 수집기가 며칠 멈춰 있으면 낡은 플랜을 최신인 줄 알고 따라가게 된다.
   const made = new Date(generatedFor + 'T00:00:00');
@@ -267,7 +312,8 @@ async function main() {
   root.innerHTML =
     '<div class="byline">🐱 작성: 냥코치</div>'
     + raceCard(p.race_strategy) + coachCard(p) + todayCard(p.today) + garminCard(t) + weekCard(p.week) + trendCard(p.history)
-    + goalCard(p.goal) + staleWarning(p.generated_for);
+    + goalCard(p.goal, p.garmin_prediction) + longGoalCard(p.long_goal, p.garmin_prediction)
+    + watchSyncLine(p.watch_sync) + staleWarning(p.generated_for);
 }
 
 main();

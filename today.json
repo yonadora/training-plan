@@ -1,10 +1,10 @@
 {
-  "generated_for": "2026-10-23",
+  "generated_for": "2026-10-25",
   "source": "garmin_calendar",
   "plan_name": "",
   "today": {
-    "date": "2026-10-23",
-    "level": null,
+    "date": "2026-10-25",
+    "level": "yellow",
     "workouts": [
       {
         "code": "rest",
@@ -30,19 +30,155 @@
   },
   "days": [
     {
-      "date": "2026-10-24",
+      "date": "2026-10-27",
       "workouts": [
         {
-          "code": "race",
-          "label": "RACE",
-          "name": "10km 대회 45분 목표",
-          "detail": "10.0KM",
-          "distance_km": 10.0,
+          "code": "base",
+          "label": "BASE RUN",
+          "name": "편한 달리기 6.3킬로 (냥코치)",
+          "detail": "6.3KM",
+          "distance_km": 6.3,
+          "duration_min": null,
+          "done": false,
+          "source": "garmin_calendar"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-28",
+      "workouts": [
+        {
+          "code": "strength",
+          "label": "STRENGTH",
+          "name": "근력 맨몸 30분 하체·코어 (냥코치)",
+          "detail": "",
+          "distance_km": null,
+          "duration_min": null,
+          "done": false,
+          "source": "garmin_calendar"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-29",
+      "workouts": [
+        {
+          "code": "interval",
+          "label": "INTERVAL",
+          "name": "편한 달리기 6.3킬로 + 질주 4회 (냥코치)",
+          "detail": "",
+          "distance_km": null,
+          "duration_min": null,
+          "done": false,
+          "source": "garmin_calendar"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-31",
+      "workouts": [
+        {
+          "code": "interval",
+          "label": "INTERVAL",
+          "name": "편한 달리기 6.3킬로 + 질주 4회 (냥코치)",
+          "detail": "",
+          "distance_km": null,
+          "duration_min": null,
+          "done": false,
+          "source": "garmin_calendar"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-01",
+      "workouts": [
+        {
+          "code": "interval",
+          "label": "INTERVAL",
+          "name": "편한 달리기 5.8킬로 + 질주 6회 (냥코치)",
+          "detail": "",
+          "distance_km": null,
+          "duration_min": null,
+          "done": false,
+          "source": "garmin_calendar"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-03",
+      "workouts": [
+        {
+          "code": "threshold",
+          "label": "THRESHOLD",
+          "name": "역치 1킬로 3회 (냥코치)",
+          "detail": "",
+          "distance_km": null,
+          "duration_min": null,
+          "done": false,
+          "source": "garmin_calendar"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-04",
+      "workouts": [
+        {
+          "code": "base",
+          "label": "BASE RUN",
+          "name": "편한 달리기 5.8킬로 (냥코치)",
+          "detail": "5.8KM",
+          "distance_km": 5.8,
+          "duration_min": null,
+          "done": false,
+          "source": "garmin_calendar"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-05",
+      "workouts": [
+        {
+          "code": "interval",
+          "label": "INTERVAL",
+          "name": "인터벌 800미터 3회 (냥코치)",
+          "detail": "",
+          "distance_km": null,
+          "duration_min": null,
+          "done": false,
+          "source": "garmin_calendar"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-06",
+      "workouts": [
+        {
+          "code": "strength",
+          "label": "STRENGTH",
+          "name": "근력 맨몸 30분 하체·코어 (냥코치)",
+          "detail": "",
+          "distance_km": null,
+          "duration_min": null,
+          "done": false,
+          "source": "garmin_calendar"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-07",
+      "workouts": [
+        {
+          "code": "long",
+          "label": "LONG RUN",
+          "name": "장거리 12.6킬로 (냥코치)",
+          "detail": "12.6KM",
+          "distance_km": 12.6,
           "duration_min": null,
           "done": false,
           "source": "garmin_calendar"
         }
       ]
     }
-  ]
+  ],
+  "days_to": "2026-11-07"
 }

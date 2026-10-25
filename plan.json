@@ -1,17 +1,17 @@
 {
-  "generated_for": "2026-10-23",
+  "generated_for": "2026-10-25",
   "today": {
-    "date": "2026-10-23",
-    "weekday": "금",
+    "date": "2026-10-25",
+    "weekday": "일",
     "kind": "휴식",
     "kind_code": "rest",
     "distance_km": 0.0,
     "pace": null,
     "duration_min": null,
-    "level": "green",
-    "level_label": "초록",
+    "level": "yellow",
+    "level_label": "노랑",
     "reasons": [
-      "오늘 지표 없음 — 판정 없이 예정대로"
+      "가민 훈련 준비도 2"
     ],
     "garmin_note": null,
     "done_km": 0,
@@ -19,30 +19,32 @@
     "strides": 0
   },
   "week": {
-    "start": "2026-10-18",
+    "start": "2026-10-25",
     "first_day": {
       "first_weekday": "일",
       "source": "가민 설정",
-      "read_at": "2026-10-22"
+      "read_at": "2026-10-25"
     },
-    "planned_km": 29.0,
-    "done_km": 22.6,
+    "planned_km": 18.9,
+    "done_km": 0,
     "days": [
       {
-        "date": "2026-10-18",
+        "date": "2026-10-25",
         "weekday": "일",
-        "kind": "롱런",
-        "kind_code": "long",
-        "distance_km": 7.4,
-        "pace": "5:48",
+        "kind": "휴식",
+        "kind_code": "rest",
+        "distance_km": 0.0,
+        "pace": null,
         "strides": 0,
-        "is_today": false,
+        "is_today": true,
         "done": false,
         "actual_km": 0,
-        "actual_min": 0
+        "actual_min": 0,
+        "fixed": false,
+        "recomputed": false
       },
       {
-        "date": "2026-10-19",
+        "date": "2026-10-26",
         "weekday": "월",
         "kind": "휴식",
         "kind_code": "rest",
@@ -51,24 +53,28 @@
         "strides": 0,
         "is_today": false,
         "done": false,
-        "actual_km": 8.01,
-        "actual_min": 49
+        "actual_km": 0,
+        "actual_min": 0,
+        "fixed": false,
+        "recomputed": false
       },
       {
-        "date": "2026-10-20",
+        "date": "2026-10-27",
         "weekday": "화",
-        "kind": "젖산역치",
-        "kind_code": "threshold",
-        "distance_km": 5.8,
-        "pace": "4:55",
+        "kind": "편한 조깅",
+        "kind_code": "easy",
+        "distance_km": 6.3,
+        "pace": "5:36",
         "strides": 0,
         "is_today": false,
-        "done": true,
-        "actual_km": 8.6,
-        "actual_min": 46
+        "done": false,
+        "actual_km": 0,
+        "actual_min": 0,
+        "fixed": false,
+        "recomputed": false
       },
       {
-        "date": "2026-10-21",
+        "date": "2026-10-28",
         "weekday": "수",
         "kind": "근력",
         "kind_code": "strength",
@@ -78,66 +84,68 @@
         "is_today": false,
         "done": false,
         "actual_km": 0,
-        "actual_min": 0
+        "actual_min": 0,
+        "fixed": false,
+        "recomputed": false
       },
       {
-        "date": "2026-10-22",
+        "date": "2026-10-29",
         "weekday": "목",
         "kind": "편한 조깅",
         "kind_code": "easy",
-        "distance_km": 5.8,
-        "pace": "5:48",
-        "strides": 0,
+        "distance_km": 6.3,
+        "pace": "5:36",
+        "strides": 4,
         "is_today": false,
-        "done": true,
-        "actual_km": 6.01,
-        "actual_min": 35
+        "done": false,
+        "actual_km": 0,
+        "actual_min": 0,
+        "fixed": false,
+        "recomputed": false
       },
       {
-        "date": "2026-10-23",
+        "date": "2026-10-30",
         "weekday": "금",
         "kind": "휴식",
         "kind_code": "rest",
         "distance_km": 0.0,
         "pace": null,
         "strides": 0,
-        "is_today": true,
-        "done": false,
-        "actual_km": 0,
-        "actual_min": 0
-      },
-      {
-        "date": "2026-10-24",
-        "weekday": "토",
-        "kind": "대회",
-        "kind_code": "race",
-        "distance_km": 10.0,
-        "pace": "4:30",
-        "strides": 0,
         "is_today": false,
         "done": false,
         "actual_km": 0,
-        "actual_min": 0
+        "actual_min": 0,
+        "fixed": false,
+        "recomputed": false
+      },
+      {
+        "date": "2026-10-31",
+        "weekday": "토",
+        "kind": "편한 조깅",
+        "kind_code": "easy",
+        "distance_km": 6.3,
+        "pace": "5:36",
+        "strides": 4,
+        "is_today": false,
+        "done": false,
+        "actual_km": 0,
+        "actual_min": 0,
+        "fixed": false,
+        "recomputed": false
       }
     ],
-    "actual_min": 130
+    "actual_min": 0
   },
   "goal": {
     "distance_km": 10.0,
     "target": "45:00",
-    "current": "47:13",
+    "current": "45:29",
     "current_is_default": false,
     "reached": false,
-    "weeks_to_target": 19,
-    "note": "현재 추세로 약 19주 뒤 도달 예상."
+    "weeks_to_target": null,
+    "note": "대회·기록 측정이 3번 모이고 8주 넘게 쌓이면 도달 시점을 계산합니다. 현재 1번."
   },
   "history": [
-    {
-      "start": "2026-08-30",
-      "km": 15.7,
-      "runs": 3,
-      "avg_pace": "6:31"
-    },
     {
       "start": "2026-09-06",
       "km": 34.0,
@@ -176,31 +184,28 @@
     },
     {
       "start": "2026-10-18",
-      "km": 22.6,
-      "runs": 3,
-      "avg_pace": "5:45"
+      "km": 32.6,
+      "runs": 4,
+      "avg_pace": "5:23"
+    },
+    {
+      "start": "2026-10-25",
+      "km": 0,
+      "runs": 0,
+      "avg_pace": null
     }
   ],
-  "race_strategy": {
-    "date": "2026-10-24",
-    "days_left": 1,
-    "distance_km": 10.0,
-    "target": "45:00",
-    "predicted": "47:13",
-    "predicted_is_default": false,
-    "gap_sec": 133,
-    "goal_pace": "4:30",
-    "first_half_km": 5.0,
-    "first_half_pace": [
-      "4:32",
-      "4:35"
-    ],
-    "second_half_pace": [
-      "4:25",
-      "4:30"
-    ],
-    "first_km_floor": "4:25",
-    "half_split": "22:45",
-    "plan_b_pace": "4:43"
+  "race_strategy": null,
+  "long_goal": null,
+  "garmin_prediction": {
+    "date": "2026-10-25",
+    "5k": "21:24",
+    "10k": "45:02",
+    "half": "1:42:10"
+  },
+  "watch_sync": {
+    "date": "2026-10-25",
+    "status": "applied",
+    "changes": 7
   }
 }
