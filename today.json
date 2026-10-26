@@ -1,10 +1,10 @@
 {
-  "generated_for": "2026-10-25",
+  "generated_for": "2026-10-26",
   "source": "garmin_calendar",
   "plan_name": "",
   "today": {
-    "date": "2026-10-25",
-    "level": "yellow",
+    "date": "2026-10-26",
+    "level": "green",
     "workouts": [
       {
         "code": "rest",
