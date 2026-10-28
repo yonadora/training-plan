@@ -130,8 +130,128 @@ function todayCard(t) {
       ${pace ? `<div class="pace">${esc(pace)}</div>` : ''}
       ${amount ? `<div class="amount">${esc(amount)}</div>` : ''}
       ${t.done ? `<div class="today-done">✓ 오늘 ${esc(t.done_km)}km 뛰었다냥</div>` : ''}
+      ${t.kind_code === 'strength' ? '<a class="guide-link" href="#strength-guide">운동 설명과 그림은 아래 근력 운동 안내에 있다냥 ↓</a>' : ''}
       ${reasons}
     </section>`;
+}
+
+// ---------------------------------------------------------------- 근력 운동 안내 (2026-10-28)
+// 시계 근력 워크아웃에는 운동 이름만 뜨고 시범이 없어(가민은 자기 기본 워크아웃에만 애니메이션을 붙인다)
+// 여기서 자세·횟수·흔한 실수·러너에게 왜 필요한지를 설명한다. 그림은 인라인 SVG 막대 인물(외부 이미지 없음).
+// 횟수·바퀴·휴식은 plan.json 의 strength(가민 워크아웃과 같은 상수에서 만든 것)를 쓰고, 없으면 기본값.
+
+const STRENGTH_DEFAULT = {
+  rounds: 3, rest_sec: 20, round_rest_sec: 60, warmup_sec: 180, cooldown_sec: 120, minutes: 30,
+  menu: [
+    { key: 'AIR_SQUAT', label: '맨몸 스쿼트 15회' },
+    { key: 'LUNGE', label: '런지 좌우 10회씩' },
+    { key: 'SINGLE_LEG_HIP_RAISE', label: '한 다리 힙 브리지 좌우 10회씩' },
+    { key: 'SINGLE_LEG_STANDING_CALF_RAISE', label: '한 다리 카프 레이즈 좌우 12회씩' },
+    { key: 'PLANK', label: '플랭크 45초' },
+    { key: 'SIDE_PLANK', label: '사이드 플랭크 좌우 30초씩' },
+    { key: 'DEAD_BUG', label: '데드버그 좌우 10회씩' },
+  ],
+};
+
+// 막대 인물. 64x48 칸, 선 색은 글자 색(currentColor). 머리 = 원, 몸·팔·다리 = 꺾은선.
+const SVG_HEAD = (x, y) => `<circle cx="${x}" cy="${y}" r="4"/>`;
+const FIG = {
+  warmup: `${SVG_HEAD(30, 8)}<path d="M30 12v16M30 16l-7 7M30 16l7 5M30 28l-6 16M30 28l12 7"/><path d="M38 40c4-2 8-6 9-11" stroke-dasharray="2 2"/>`,
+  AIR_SQUAT: `${SVG_HEAD(26, 8)}<path d="M26 12l-2 14M24 26l14-4M24 26l12 6-2 12M22 44h18M24 26l-8 9 4 9"/>`,
+  LUNGE: `${SVG_HEAD(28, 7)}<path d="M28 11v16M28 15l-6 8M28 15l6 8M28 27l-12 6 2 11M28 27l14 6-2 11M14 44h34"/>`,
+  SINGLE_LEG_HIP_RAISE: `${SVG_HEAD(8, 36)}<path d="M12 38l18-10 10 2 4 14M30 28l16-10M4 44h56M12 38l10 4"/>`,
+  SINGLE_LEG_STANDING_CALF_RAISE: `${SVG_HEAD(30, 7)}<path d="M30 11v16M30 15l-7 6M30 15l8 2M30 27l-2 11 4 4M30 27l10 5-4 8M20 44h22M40 44v-4h10"/>`,
+  PLANK: `${SVG_HEAD(10, 24)}<path d="M14 26l36 6M18 27l-4 10h8M50 32l4 11M6 44h52"/>`,
+  SIDE_PLANK: `${SVG_HEAD(14, 16)}<path d="M18 20l34 14M18 26l-4 10h6M18 20l4-10M52 34l6 8M6 44h52"/>`,
+  DEAD_BUG: `${SVG_HEAD(12, 38)}<path d="M16 38h18l6-14M34 38l14 2M22 38l2-16M34 38l10-8M4 44h56"/>`,
+  cooldown: `${SVG_HEAD(22, 12)}<path d="M24 16l6 10 12 2M30 26l-6 16M30 26l8 2 6 12M18 44h30M44 40v-6h10"/>`,
+};
+
+const STRENGTH_GUIDE = {
+  AIR_SQUAT: {
+    how: ['발은 어깨너비, 발끝은 살짝 바깥으로 둔다냥.', '엉덩이를 뒤로 빼며 앉고, 허벅지가 바닥과 평행할 때까지 내려간다냥.', '무릎은 발끝 방향, 가슴은 든 채 뒤꿈치로 밀어 일어난다냥.'],
+    bad: '무릎이 안쪽으로 모이거나 뒤꿈치가 뜨면 틀린 자세다냥.',
+    why: '허벅지 앞·엉덩이가 착지 충격을 받아 주고 무릎을 지킨다냥.',
+  },
+  LUNGE: {
+    how: ['한 발을 크게 앞으로 내딛고 양 무릎을 90도까지 내린다냥.', '앞무릎은 발목 위, 뒷무릎은 바닥 가까이, 상체는 세운다냥.', '앞발 뒤꿈치로 밀어 제자리로 돌아온다냥.'],
+    bad: '보폭이 짧아 앞무릎이 발끝을 한참 넘어가면 틀렸다냥.',
+    why: '달리기는 한 다리씩 하는 운동이다냥. 좌우 힘 차이와 골반 흔들림을 줄인다냥.',
+  },
+  SINGLE_LEG_HIP_RAISE: {
+    how: ['누워 무릎을 세우고 한 다리는 펴서 든다냥.', '뒤꿈치로 바닥을 밀어 어깨-엉덩이-무릎이 일직선이 될 때까지 올린다냥.', '꼭대기에서 1초 멈추고 천천히 내린다냥.'],
+    bad: '허리를 젖혀 올리면 안 된다냥. 엉덩이가 아니라 허리가 뻐근하면 틀린 것이다냥.',
+    why: '엉덩이가 약하면 햄스트링과 허리가 대신 일해서 다친다냥. 추진력은 엉덩이에서 나온다냥.',
+  },
+  SINGLE_LEG_STANDING_CALF_RAISE: {
+    how: ['벽이나 의자에 손가락만 대고 한 발로 선다냥.', '뒤꿈치를 최대한 높이 올려 1초 버티고, 2~3초에 걸쳐 천천히 내린다냥.', '계단 끝에 서면 아래로 더 내려가 범위가 커진다냥.'],
+    bad: '발목이 바깥으로 꺾이거나 반동으로 튕기면 안 된다냥.',
+    why: '종아리와 아킬레스건은 달릴 때 체중의 몇 배를 받는다냥. 여기가 약하면 정강이·아킬레스가 아프다냥.',
+  },
+  PLANK: {
+    how: ['팔꿈치는 어깨 바로 아래, 머리-어깨-엉덩이-뒤꿈치가 일직선이다냥.', '배꼽을 등 쪽으로 당기고 엉덩이를 살짝 조인다냥.', '숨은 멈추지 않는다냥.'],
+    bad: '엉덩이가 처지거나 하늘로 솟으면 틀린 자세다냥.',
+    why: '몸통이 단단해야 후반에 자세가 안 무너지고 다리 힘이 땅에 그대로 전달된다냥.',
+  },
+  SIDE_PLANK: {
+    how: ['옆으로 누워 팔꿈치를 어깨 아래에 두고 발은 포개거나 앞뒤로 둔다냥.', '엉덩이를 들어 머리부터 발까지 일직선을 만든다냥.', '위쪽 손은 허리에 얹거나 하늘로 뻗는다냥.'],
+    bad: '엉덩이가 뒤로 빠지거나 아래로 처지면 틀렸다냥.',
+    why: '옆구리와 엉덩이 옆 근육이 한 발 착지 때 골반을 수평으로 잡는다냥. 무릎 바깥 통증의 예방이다냥.',
+  },
+  DEAD_BUG: {
+    how: ['누워 팔은 천장으로, 무릎은 90도로 든다냥.', '허리를 바닥에 붙인 채 반대쪽 팔과 다리를 천천히 바닥 직전까지 뻗는다냥.', '내쉬며 뻗고 들이쉬며 돌아온다냥.'],
+    bad: '허리가 바닥에서 뜨면 범위를 줄인다냥.',
+    why: '팔다리가 반대로 움직일 때 몸통을 잡는 것, 그게 달리기 그 자체다냥.',
+  },
+};
+
+function secText(s) {
+  return s % 60 === 0 ? `${s / 60}분` : `${s}초`;
+}
+
+function figure(key) {
+  const body = FIG[key] || '';
+  return `<svg class="fig" viewBox="0 0 64 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${body}</svg>`;
+}
+
+function strengthCard(p, t) {
+  const s = (p && p.strength && p.strength.menu && p.strength.menu.length) ? p.strength : STRENGTH_DEFAULT;
+  const todayStrength = (p && p.today && p.today.kind_code === 'strength')
+    || !!(t && t.today && (t.today.workouts || []).some(w => w.code === 'strength'));
+  const items = s.menu.map(m => {
+    const g = STRENGTH_GUIDE[m.key];
+    if (!g) return `<li class="ex"><div>${figure(m.key)}</div><div><div class="ex-name">${esc(m.label)}</div></div></li>`;
+    return `
+      <li class="ex">
+        <div>${figure(m.key)}</div>
+        <div>
+          <div class="ex-name">${esc(m.label)}</div>
+          <ul class="ex-how">${g.how.map(h => `<li>${esc(h)}</li>`).join('')}</ul>
+          <div class="ex-bad">실수: ${esc(g.bad)}</div>
+          <div class="ex-why">왜: ${esc(g.why)}</div>
+        </div>
+      </li>`;
+  }).join('');
+  return `
+    <details class="card strength" id="strength-guide" ${todayStrength ? 'open' : ''}>
+      <summary><span class="coach-head"><span class="cat">🐱</span> 근력 운동 안내</span>
+        <span class="hint">맨몸 약 ${esc(s.minutes)}분 · ${esc(s.rounds)}바퀴</span></summary>
+      <p class="goal-note">시계에는 운동 이름만 뜬다냥. 자세는 여기서 익히고 가라냥. 통증이 나면 그 운동은 빼고 전문가에게 보여라냥.</p>
+      <ul class="ex-list">
+        <li class="ex">
+          <div>${figure('warmup')}</div>
+          <div><div class="ex-name">준비 ${esc(secText(s.warmup_sec))}</div>
+            <ul class="ex-how"><li>제자리 걷기, 다리 앞뒤 스윙 좌우 10회씩, 고관절 돌리기로 몸을 데운다냥.</li></ul></div>
+        </li>
+        ${items}
+        <li class="ex">
+          <div>${figure('cooldown')}</div>
+          <div><div class="ex-name">마무리 ${esc(secText(s.cooldown_sec))}</div>
+            <ul class="ex-how"><li>종아리·햄스트링·고관절 앞을 각 20~30초씩 늘린다냥. 반동 없이 숨을 길게 쉰다냥.</li></ul></div>
+        </li>
+      </ul>
+      <p class="goal-note">7가지를 차례로 한 바퀴, ${esc(s.rounds)}바퀴 돈다냥. 운동 사이 ${esc(s.rest_sec)}초, 바퀴 사이 ${esc(s.round_rest_sec)}초 쉰다냥. 횟수를 못 채우면 자세를 지키는 데까지만 하고 다음 주에 채운다냥.</p>
+    </details>`;
 }
 
 // 운동 시간: 60분 미만은 "47분", 넘으면 "1시간 5분"
@@ -311,7 +431,8 @@ async function main() {
   // 가민 일정은 없어도 된다(파일이 없거나 형식이 옛것). 그때는 카드만 빠진다.
   root.innerHTML =
     '<div class="byline">🐱 작성: 냥코치</div>'
-    + raceCard(p.race_strategy) + coachCard(p) + todayCard(p.today) + garminCard(t) + weekCard(p.week) + trendCard(p.history)
+    + raceCard(p.race_strategy) + coachCard(p) + todayCard(p.today) + garminCard(t) + weekCard(p.week)
+    + strengthCard(p, t) + trendCard(p.history)
     + goalCard(p.goal, p.garmin_prediction) + longGoalCard(p.long_goal, p.garmin_prediction)
     + watchSyncLine(p.watch_sync) + staleWarning(p.generated_for);
 }

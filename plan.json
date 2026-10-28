@@ -203,6 +203,58 @@
     "10k": "45:02",
     "half": "1:42:11"
   },
+  "strength": {
+    "rounds": 3,
+    "rest_sec": 20,
+    "round_rest_sec": 60,
+    "warmup_sec": 180,
+    "cooldown_sec": 120,
+    "minutes": 32,
+    "menu": [
+      {
+        "key": "AIR_SQUAT",
+        "label": "맨몸 스쿼트 15회",
+        "end": "reps",
+        "value": 15
+      },
+      {
+        "key": "LUNGE",
+        "label": "런지 좌우 10회씩",
+        "end": "reps",
+        "value": 20
+      },
+      {
+        "key": "SINGLE_LEG_HIP_RAISE",
+        "label": "한 다리 힙 브리지 좌우 10회씩",
+        "end": "reps",
+        "value": 20
+      },
+      {
+        "key": "SINGLE_LEG_STANDING_CALF_RAISE",
+        "label": "한 다리 카프 레이즈 좌우 12회씩",
+        "end": "reps",
+        "value": 24
+      },
+      {
+        "key": "PLANK",
+        "label": "플랭크 45초",
+        "end": "time",
+        "value": 45
+      },
+      {
+        "key": "SIDE_PLANK",
+        "label": "사이드 플랭크 좌우 30초씩",
+        "end": "time",
+        "value": 60
+      },
+      {
+        "key": "DEAD_BUG",
+        "label": "데드버그 좌우 10회씩",
+        "end": "reps",
+        "value": 20
+      }
+    ]
+  },
   "watch_sync": {
     "date": "2026-10-28",
     "status": "applied",
