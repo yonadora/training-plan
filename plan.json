@@ -1,21 +1,21 @@
 {
-  "generated_for": "2026-10-27",
+  "generated_for": "2026-10-28",
   "today": {
-    "date": "2026-10-27",
-    "weekday": "화",
-    "kind": "편한 조깅",
-    "kind_code": "easy",
-    "distance_km": 6.3,
-    "pace": "5:36",
-    "duration_min": 35,
-    "level": "yellow",
-    "level_label": "노랑",
+    "date": "2026-10-28",
+    "weekday": "수",
+    "kind": "근력",
+    "kind_code": "strength",
+    "distance_km": 0.0,
+    "pace": null,
+    "duration_min": null,
+    "level": "green",
+    "level_label": "초록",
     "reasons": [
-      "가민 훈련 준비도 19"
+      "수면 6.5시간 · 심박변이도 균형 · 안정시 심박 46 · 준비도 50"
     ],
     "garmin_note": null,
-    "done_km": 6.68,
-    "done": true,
+    "done_km": 0,
+    "done": false,
     "strides": 0
   },
   "week": {
@@ -23,7 +23,7 @@
     "first_day": {
       "first_weekday": "일",
       "source": "가민 설정",
-      "read_at": "2026-10-27"
+      "read_at": "2026-10-28"
     },
     "planned_km": 18.9,
     "done_km": 6.7,
@@ -66,11 +66,11 @@
         "distance_km": 6.3,
         "pace": "5:36",
         "strides": 0,
-        "is_today": true,
+        "is_today": false,
         "done": true,
         "actual_km": 6.68,
         "actual_min": 37,
-        "fixed": false,
+        "fixed": true,
         "recomputed": false
       },
       {
@@ -81,7 +81,7 @@
         "distance_km": 0.0,
         "pace": null,
         "strides": 0,
-        "is_today": false,
+        "is_today": true,
         "done": false,
         "actual_km": 0,
         "actual_min": 0,
@@ -198,14 +198,14 @@
   "race_strategy": null,
   "long_goal": null,
   "garmin_prediction": {
-    "date": "2026-10-27",
-    "5k": "21:24",
+    "date": "2026-10-28",
+    "5k": "21:26",
     "10k": "45:02",
-    "half": "1:42:08"
+    "half": "1:42:11"
   },
   "watch_sync": {
-    "date": "2026-10-27",
+    "date": "2026-10-28",
     "status": "applied",
-    "changes": 3
+    "changes": 4
   }
 }
