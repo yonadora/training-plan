@@ -1,32 +1,32 @@
 {
-  "generated_for": "2026-10-28",
+  "generated_for": "2026-10-29",
   "today": {
-    "date": "2026-10-28",
-    "weekday": "수",
-    "kind": "근력",
-    "kind_code": "strength",
-    "distance_km": 0.0,
-    "pace": null,
-    "duration_min": null,
+    "date": "2026-10-29",
+    "weekday": "목",
+    "kind": "편한 조깅",
+    "kind_code": "easy",
+    "distance_km": 6.3,
+    "pace": "5:36",
+    "duration_min": 35,
     "level": "green",
     "level_label": "초록",
     "reasons": [
-      "수면 6.5시간 · 심박변이도 균형 · 안정시 심박 46 · 준비도 50"
+      "수면 4.8시간 · 심박변이도 균형 · 안정시 심박 48 · 준비도 36"
     ],
-    "garmin_note": null,
-    "done_km": 0,
-    "done": false,
-    "strides": 0
+    "garmin_note": "가민은 준비도 36으로 낮게 봅니다.",
+    "done_km": 6.8,
+    "done": true,
+    "strides": 4
   },
   "week": {
     "start": "2026-10-25",
     "first_day": {
       "first_weekday": "일",
       "source": "가민 설정",
-      "read_at": "2026-10-28"
+      "read_at": "2026-10-29"
     },
     "planned_km": 18.9,
-    "done_km": 6.7,
+    "done_km": 13.5,
     "days": [
       {
         "date": "2026-10-25",
@@ -81,11 +81,11 @@
         "distance_km": 0.0,
         "pace": null,
         "strides": 0,
-        "is_today": true,
+        "is_today": false,
         "done": false,
         "actual_km": 0,
         "actual_min": 0,
-        "fixed": false,
+        "fixed": true,
         "recomputed": false
       },
       {
@@ -96,10 +96,10 @@
         "distance_km": 6.3,
         "pace": "5:36",
         "strides": 4,
-        "is_today": false,
-        "done": false,
-        "actual_km": 0,
-        "actual_min": 0,
+        "is_today": true,
+        "done": true,
+        "actual_km": 6.8,
+        "actual_min": 35,
         "fixed": false,
         "recomputed": false
       },
@@ -134,7 +134,7 @@
         "recomputed": false
       }
     ],
-    "actual_min": 37
+    "actual_min": 73
   },
   "goal": {
     "distance_km": 10.0,
@@ -190,18 +190,18 @@
     },
     {
       "start": "2026-10-25",
-      "km": 6.7,
-      "runs": 1,
-      "avg_pace": "5:35"
+      "km": 13.5,
+      "runs": 2,
+      "avg_pace": "5:23"
     }
   ],
   "race_strategy": null,
   "long_goal": null,
   "garmin_prediction": {
-    "date": "2026-10-28",
-    "5k": "21:26",
+    "date": "2026-10-29",
+    "5k": "21:24",
     "10k": "45:02",
-    "half": "1:42:11"
+    "half": "1:42:04"
   },
   "strength": {
     "rounds": 3,
@@ -256,7 +256,7 @@
     ]
   },
   "watch_sync": {
-    "date": "2026-10-28",
+    "date": "2026-10-29",
     "status": "applied",
     "changes": 4
   }
