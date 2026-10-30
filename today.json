@@ -1,28 +1,28 @@
 {
-  "generated_for": "2026-10-29",
+  "generated_for": "2026-10-30",
   "source": "garmin_calendar",
   "plan_name": "",
   "today": {
-    "date": "2026-10-29",
+    "date": "2026-10-30",
     "level": "green",
     "workouts": [
       {
-        "code": "interval",
-        "label": "INTERVAL",
-        "name": "편한 달리기 6.3킬로 + 질주 4회 (냥코치)",
+        "code": "rest",
+        "label": "REST",
+        "name": "휴식",
         "detail": "",
         "distance_km": null,
         "duration_min": null,
         "pace": null,
         "description": "",
-        "sport": "running",
+        "sport": "",
         "done": false,
-        "source": "garmin_calendar"
+        "source": ""
       }
     ],
-    "kind": "편한 달리기 6.3킬로 + 질주 4회 (냥코치)",
-    "kind_code": "interval",
-    "label": "INTERVAL",
+    "kind": "휴식",
+    "kind_code": "rest",
+    "label": "REST",
     "detail": "",
     "distance_km": null,
     "pace": null,
