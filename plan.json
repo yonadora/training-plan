@@ -1,32 +1,32 @@
 {
-  "generated_for": "2026-11-04",
+  "generated_for": "2026-11-05",
   "today": {
-    "date": "2026-11-04",
-    "weekday": "수",
-    "kind": "편한 조깅",
-    "kind_code": "easy",
+    "date": "2026-11-05",
+    "weekday": "목",
+    "kind": "인터벌",
+    "kind_code": "interval",
     "distance_km": 4.2,
-    "pace": "5:36",
-    "duration_min": 24,
+    "pace": "4:16",
+    "duration_min": 18,
     "level": "green",
     "level_label": "초록",
     "reasons": [
-      "심박변이도 균형 · 준비도 79"
+      "수면 4.4시간 · 심박변이도 균형 · 안정시 심박 54 · 준비도 40"
     ],
-    "garmin_note": null,
+    "garmin_note": "가민은 준비도 40으로 낮게 봅니다.",
     "done_km": 0,
     "done": false,
-    "strides": 6
+    "strides": 0
   },
   "week": {
     "start": "2026-11-01",
     "first_day": {
       "first_weekday": "일",
       "source": "가민 설정",
-      "read_at": "2026-11-04"
+      "read_at": "2026-11-05"
     },
     "planned_km": 25.7,
-    "done_km": 4.8,
+    "done_km": 13.6,
     "days": [
       {
         "date": "2026-11-01",
@@ -81,11 +81,11 @@
         "distance_km": 4.2,
         "pace": "5:36",
         "strides": 6,
-        "is_today": true,
-        "done": false,
-        "actual_km": 0,
-        "actual_min": 0,
-        "fixed": false,
+        "is_today": false,
+        "done": true,
+        "actual_km": 8.82,
+        "actual_min": 47,
+        "fixed": true,
         "recomputed": false
       },
       {
@@ -96,7 +96,7 @@
         "distance_km": 4.2,
         "pace": "4:16",
         "strides": 0,
-        "is_today": false,
+        "is_today": true,
         "done": false,
         "actual_km": 0,
         "actual_min": 0,
@@ -134,7 +134,7 @@
         "recomputed": false
       }
     ],
-    "actual_min": 26
+    "actual_min": 73
   },
   "goal": {
     "distance_km": 10.0,
@@ -190,9 +190,9 @@
     },
     {
       "start": "2026-11-01",
-      "km": 4.8,
-      "runs": 1,
-      "avg_pace": "5:21"
+      "km": 13.6,
+      "runs": 2,
+      "avg_pace": "5:19"
     }
   ],
   "race_strategy": null,
@@ -206,10 +206,10 @@
     "longest_share": 0.56
   },
   "garmin_prediction": {
-    "date": "2026-11-04",
+    "date": "2026-11-05",
     "5k": "21:23",
     "10k": "45:02",
-    "half": "1:42:01"
+    "half": "1:42:03"
   },
   "strength": {
     "rounds": 3,
@@ -264,8 +264,8 @@
     ]
   },
   "watch_sync": {
-    "date": "2026-11-04",
+    "date": "2026-11-05",
     "status": "applied",
-    "changes": 8
+    "changes": 7
   }
 }
