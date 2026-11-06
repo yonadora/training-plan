@@ -1,19 +1,19 @@
 {
-  "generated_for": "2026-11-05",
+  "generated_for": "2026-11-06",
   "today": {
-    "date": "2026-11-05",
-    "weekday": "목",
-    "kind": "인터벌",
-    "kind_code": "interval",
-    "distance_km": 4.2,
-    "pace": "4:16",
-    "duration_min": 18,
+    "date": "2026-11-06",
+    "weekday": "금",
+    "kind": "근력",
+    "kind_code": "strength",
+    "distance_km": 0.0,
+    "pace": null,
+    "duration_min": null,
     "level": "green",
     "level_label": "초록",
     "reasons": [
-      "수면 4.4시간 · 심박변이도 균형 · 안정시 심박 54 · 준비도 40"
+      "수면 4.8시간 · 심박변이도 균형 · 안정시 심박 49 · 준비도 54"
     ],
-    "garmin_note": "가민은 준비도 40으로 낮게 봅니다.",
+    "garmin_note": null,
     "done_km": 0,
     "done": false,
     "strides": 0
@@ -23,7 +23,7 @@
     "first_day": {
       "first_weekday": "일",
       "source": "가민 설정",
-      "read_at": "2026-11-05"
+      "read_at": "2026-11-06"
     },
     "planned_km": 25.7,
     "done_km": 13.6,
@@ -96,11 +96,11 @@
         "distance_km": 4.2,
         "pace": "4:16",
         "strides": 0,
-        "is_today": true,
+        "is_today": false,
         "done": false,
         "actual_km": 0,
         "actual_min": 0,
-        "fixed": false,
+        "fixed": true,
         "recomputed": false
       },
       {
@@ -111,7 +111,7 @@
         "distance_km": 0.0,
         "pace": null,
         "strides": 0,
-        "is_today": false,
+        "is_today": true,
         "done": false,
         "actual_km": 0,
         "actual_min": 0,
@@ -206,10 +206,10 @@
     "longest_share": 0.56
   },
   "garmin_prediction": {
-    "date": "2026-11-05",
-    "5k": "21:23",
+    "date": "2026-11-06",
+    "5k": "21:24",
     "10k": "45:02",
-    "half": "1:42:03"
+    "half": "1:42:05"
   },
   "strength": {
     "rounds": 3,
@@ -264,7 +264,7 @@
     ]
   },
   "watch_sync": {
-    "date": "2026-11-05",
+    "date": "2026-11-06",
     "status": "applied",
     "changes": 7
   }

@@ -1,28 +1,28 @@
 {
-  "generated_for": "2026-11-05",
+  "generated_for": "2026-11-06",
   "source": "garmin_calendar",
   "plan_name": "",
   "today": {
-    "date": "2026-11-05",
+    "date": "2026-11-06",
     "level": "green",
     "workouts": [
       {
-        "code": "interval",
-        "label": "INTERVAL",
-        "name": "인터벌 800미터 3회 (냥코치)",
+        "code": "strength",
+        "label": "STRENGTH",
+        "name": "근력 맨몸 30분 하체·코어 (냥코치)",
         "detail": "",
         "distance_km": null,
         "duration_min": null,
         "pace": null,
         "description": "",
-        "sport": "running",
+        "sport": "strength_training",
         "done": false,
         "source": "garmin_calendar"
       }
     ],
-    "kind": "인터벌 800미터 3회 (냥코치)",
-    "kind_code": "interval",
-    "label": "INTERVAL",
+    "kind": "근력 맨몸 30분 하체·코어 (냥코치)",
+    "kind_code": "strength",
+    "label": "STRENGTH",
     "detail": "",
     "distance_km": null,
     "pace": null,
@@ -125,7 +125,7 @@
         {
           "code": "interval",
           "label": "INTERVAL",
-          "name": "편한 달리기 4.8킬로 + 질주 6회 (냥코치)",
+          "name": "편한 달리기 4.1킬로 + 질주 6회 (냥코치)",
           "detail": "",
           "distance_km": null,
           "duration_min": null,
@@ -155,9 +155,9 @@
         {
           "code": "base",
           "label": "BASE RUN",
-          "name": "편한 달리기 4.8킬로 (냥코치)",
-          "detail": "4.8KM",
-          "distance_km": 4.8,
+          "name": "편한 달리기 4.1킬로 (냥코치)",
+          "detail": "4.1KM",
+          "distance_km": 4.1,
           "duration_min": null,
           "done": false,
           "source": "garmin_calendar"
@@ -200,9 +200,9 @@
         {
           "code": "long",
           "label": "LONG RUN",
-          "name": "장거리 10.3킬로 (냥코치)",
-          "detail": "10.3KM",
-          "distance_km": 10.3,
+          "name": "장거리 8.8킬로 (냥코치)",
+          "detail": "8.8KM",
+          "distance_km": 8.8,
           "duration_min": null,
           "done": false,
           "source": "garmin_calendar"
