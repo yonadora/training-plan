@@ -1,15 +1,15 @@
 {
-  "generated_for": "2026-11-10",
+  "generated_for": "2026-11-11",
   "source": "garmin_calendar",
   "plan_name": "",
   "today": {
-    "date": "2026-11-10",
+    "date": "2026-11-11",
     "level": "yellow",
     "workouts": [
       {
-        "code": "tempo",
-        "label": "TEMPO",
-        "name": "템포(마라톤 페이스) 4.2킬로 (냥코치)",
+        "code": "base",
+        "label": "BASE RUN",
+        "name": "편한 달리기 4.2킬로 (냥코치)",
         "detail": "4.2KM",
         "distance_km": 4.2,
         "duration_min": null,
@@ -20,9 +20,9 @@
         "source": "garmin_calendar"
       }
     ],
-    "kind": "템포(마라톤 페이스) 4.2킬로 (냥코치)",
-    "kind_code": "tempo",
-    "label": "TEMPO",
+    "kind": "편한 달리기 4.2킬로 (냥코치)",
+    "kind_code": "base",
+    "label": "BASE RUN",
     "detail": "4.2KM",
     "distance_km": 4.2,
     "pace": null,

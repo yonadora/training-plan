@@ -1,21 +1,21 @@
 {
-  "generated_for": "2026-11-10",
+  "generated_for": "2026-11-11",
   "today": {
-    "date": "2026-11-10",
-    "weekday": "화",
-    "kind": "마라톤 페이스",
-    "kind_code": "marathon",
+    "date": "2026-11-11",
+    "weekday": "수",
+    "kind": "편한 조깅",
+    "kind_code": "easy",
     "distance_km": 4.2,
-    "pace": "5:02",
-    "duration_min": 21,
+    "pace": "5:36",
+    "duration_min": 24,
     "level": "yellow",
     "level_label": "노랑",
     "reasons": [
-      "가민 훈련 준비도 17"
+      "안정시 심박 57 (평소보다 +5)"
     ],
     "garmin_note": null,
-    "done_km": 4.78,
-    "done": true,
+    "done_km": 0,
+    "done": false,
     "strides": 0
   },
   "week": {
@@ -23,7 +23,7 @@
     "first_day": {
       "first_weekday": "일",
       "source": "가민 설정",
-      "read_at": "2026-11-10"
+      "read_at": "2026-11-11"
     },
     "planned_km": 25.9,
     "done_km": 4.8,
@@ -66,11 +66,11 @@
         "distance_km": 4.2,
         "pace": "5:02",
         "strides": 0,
-        "is_today": true,
+        "is_today": false,
         "done": true,
         "actual_km": 4.78,
         "actual_min": 25,
-        "fixed": false,
+        "fixed": true,
         "recomputed": false
       },
       {
@@ -81,7 +81,7 @@
         "distance_km": 4.2,
         "pace": "5:36",
         "strides": 0,
-        "is_today": false,
+        "is_today": true,
         "done": false,
         "actual_km": 0,
         "actual_min": 0,
@@ -206,10 +206,10 @@
     "longest_share": 0.56
   },
   "garmin_prediction": {
-    "date": "2026-11-10",
+    "date": "2026-11-11",
     "5k": "21:25",
     "10k": "45:02",
-    "half": "1:42:04"
+    "half": "1:42:05"
   },
   "strength": {
     "rounds": 3,
@@ -264,8 +264,8 @@
     ]
   },
   "watch_sync": {
-    "date": "2026-11-10",
+    "date": "2026-11-11",
     "status": "applied",
-    "changes": 6
+    "changes": 1
   }
 }
