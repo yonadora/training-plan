@@ -1,17 +1,17 @@
 {
-  "generated_for": "2026-11-11",
+  "generated_for": "2026-11-12",
   "source": "garmin_calendar",
   "plan_name": "",
   "today": {
-    "date": "2026-11-11",
+    "date": "2026-11-12",
     "level": "yellow",
     "workouts": [
       {
-        "code": "base",
-        "label": "BASE RUN",
-        "name": "편한 달리기 4.2킬로 (냥코치)",
-        "detail": "4.2KM",
-        "distance_km": 4.2,
+        "code": "threshold",
+        "label": "THRESHOLD",
+        "name": "역치 1킬로 2회 (냥코치)",
+        "detail": "",
+        "distance_km": null,
         "duration_min": null,
         "pace": null,
         "description": "",
@@ -20,11 +20,11 @@
         "source": "garmin_calendar"
       }
     ],
-    "kind": "편한 달리기 4.2킬로 (냥코치)",
-    "kind_code": "base",
-    "label": "BASE RUN",
-    "detail": "4.2KM",
-    "distance_km": 4.2,
+    "kind": "역치 1킬로 2회 (냥코치)",
+    "kind_code": "threshold",
+    "label": "THRESHOLD",
+    "detail": "",
+    "distance_km": null,
     "pace": null,
     "duration_min": null
   },
@@ -78,9 +78,9 @@
       "date": "2026-11-12",
       "workouts": [
         {
-          "code": "interval",
-          "label": "INTERVAL",
-          "name": "인터벌 800미터 3회 (냥코치)",
+          "code": "threshold",
+          "label": "THRESHOLD",
+          "name": "역치 1킬로 2회 (냥코치)",
           "detail": "",
           "distance_km": null,
           "duration_min": null,
@@ -123,11 +123,11 @@
       "date": "2026-11-15",
       "workouts": [
         {
-          "code": "interval",
-          "label": "INTERVAL",
-          "name": "편한 달리기 4킬로 + 질주 6회 (냥코치)",
-          "detail": "",
-          "distance_km": null,
+          "code": "base",
+          "label": "BASE RUN",
+          "name": "편한 달리기 3.2킬로 (냥코치)",
+          "detail": "3.2KM",
+          "distance_km": 3.2,
           "duration_min": null,
           "done": false,
           "source": "garmin_calendar"
@@ -155,24 +155,9 @@
         {
           "code": "base",
           "label": "BASE RUN",
-          "name": "편한 달리기 4킬로 (냥코치)",
-          "detail": "4.0KM",
-          "distance_km": 4.0,
-          "duration_min": null,
-          "done": false,
-          "source": "garmin_calendar"
-        }
-      ]
-    },
-    {
-      "date": "2026-11-19",
-      "workouts": [
-        {
-          "code": "interval",
-          "label": "INTERVAL",
-          "name": "인터벌 800미터 3회 (냥코치)",
-          "detail": "",
-          "distance_km": null,
+          "name": "편한 달리기 3.2킬로 (냥코치)",
+          "detail": "3.2KM",
+          "distance_km": 3.2,
           "duration_min": null,
           "done": false,
           "source": "garmin_calendar"
@@ -200,9 +185,9 @@
         {
           "code": "long",
           "label": "LONG RUN",
-          "name": "장거리 8.6킬로 (냥코치)",
-          "detail": "8.6KM",
-          "distance_km": 8.6,
+          "name": "장거리 7킬로 (냥코치)",
+          "detail": "7.0KM",
+          "distance_km": 7.0,
           "duration_min": null,
           "done": false,
           "source": "garmin_calendar"
