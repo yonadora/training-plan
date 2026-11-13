@@ -1,17 +1,19 @@
 {
-  "generated_for": "2026-11-12",
+  "generated_for": "2026-11-13",
   "today": {
-    "date": "2026-11-12",
-    "weekday": "목",
-    "kind": "젖산역치",
-    "kind_code": "threshold",
-    "distance_km": 4.2,
-    "pace": "4:45",
-    "duration_min": 20,
-    "level": "yellow",
-    "level_label": "노랑",
+    "date": "2026-11-13",
+    "weekday": "금",
+    "kind": "근력",
+    "kind_code": "strength",
+    "distance_km": 0.0,
+    "pace": null,
+    "duration_min": null,
+    "level": "red",
+    "level_label": "빨강",
     "reasons": [
-      "심박변이도 상태 '불균형'"
+      "심박변이도 상태 '불균형'",
+      "수면 3.4시간 (평소보다 1.6시간 부족)",
+      "가민 훈련 준비도 17"
     ],
     "garmin_note": null,
     "done_km": 0,
@@ -23,7 +25,7 @@
     "first_day": {
       "first_weekday": "일",
       "source": "가민 설정",
-      "read_at": "2026-11-12"
+      "read_at": "2026-11-13"
     },
     "planned_km": 25.9,
     "done_km": 4.8,
@@ -96,11 +98,11 @@
         "distance_km": 4.2,
         "pace": "4:45",
         "strides": 0,
-        "is_today": true,
+        "is_today": false,
         "done": false,
         "actual_km": 0,
         "actual_min": 0,
-        "fixed": false,
+        "fixed": true,
         "recomputed": false
       },
       {
@@ -111,7 +113,7 @@
         "distance_km": 0.0,
         "pace": null,
         "strides": 0,
-        "is_today": false,
+        "is_today": true,
         "done": false,
         "actual_km": 0,
         "actual_min": 0,
@@ -121,11 +123,11 @@
       {
         "date": "2026-11-14",
         "weekday": "토",
-        "kind": "롱런",
-        "kind_code": "long",
+        "kind": "편한 조깅",
+        "kind_code": "easy",
         "distance_km": 9.1,
         "pace": "5:36",
-        "strides": 0,
+        "strides": 6,
         "is_today": false,
         "done": false,
         "actual_km": 0,
@@ -206,10 +208,10 @@
     "longest_share": 0.56
   },
   "garmin_prediction": {
-    "date": "2026-11-12",
-    "5k": "21:33",
+    "date": "2026-11-13",
+    "5k": "21:29",
     "10k": "45:02",
-    "half": "1:42:24"
+    "half": "1:42:14"
   },
   "strength": {
     "rounds": 3,
@@ -264,7 +266,7 @@
     ]
   },
   "watch_sync": {
-    "date": "2026-11-12",
+    "date": "2026-11-13",
     "status": "applied",
     "changes": 8
   }
