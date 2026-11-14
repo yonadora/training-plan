@@ -1,19 +1,17 @@
 {
-  "generated_for": "2026-11-13",
+  "generated_for": "2026-11-14",
   "today": {
-    "date": "2026-11-13",
-    "weekday": "금",
-    "kind": "근력",
-    "kind_code": "strength",
-    "distance_km": 0.0,
-    "pace": null,
-    "duration_min": null,
-    "level": "red",
-    "level_label": "빨강",
+    "date": "2026-11-14",
+    "weekday": "토",
+    "kind": "편한 조깅",
+    "kind_code": "easy",
+    "distance_km": 8.7,
+    "pace": "5:36",
+    "duration_min": 49,
+    "level": "yellow",
+    "level_label": "노랑",
     "reasons": [
-      "심박변이도 상태 '불균형'",
-      "수면 3.4시간 (평소보다 1.6시간 부족)",
-      "가민 훈련 준비도 17"
+      "심박변이도 상태 '불균형'"
     ],
     "garmin_note": null,
     "done_km": 0,
@@ -25,9 +23,9 @@
     "first_day": {
       "first_weekday": "일",
       "source": "가민 설정",
-      "read_at": "2026-11-13"
+      "read_at": "2026-11-14"
     },
-    "planned_km": 25.9,
+    "planned_km": 25.5,
     "done_km": 4.8,
     "days": [
       {
@@ -113,11 +111,11 @@
         "distance_km": 0.0,
         "pace": null,
         "strides": 0,
-        "is_today": true,
+        "is_today": false,
         "done": false,
         "actual_km": 0,
         "actual_min": 0,
-        "fixed": false,
+        "fixed": true,
         "recomputed": false
       },
       {
@@ -125,10 +123,10 @@
         "weekday": "토",
         "kind": "편한 조깅",
         "kind_code": "easy",
-        "distance_km": 9.1,
+        "distance_km": 8.7,
         "pace": "5:36",
-        "strides": 6,
-        "is_today": false,
+        "strides": 0,
+        "is_today": true,
         "done": false,
         "actual_km": 0,
         "actual_min": 0,
@@ -208,10 +206,10 @@
     "longest_share": 0.56
   },
   "garmin_prediction": {
-    "date": "2026-11-13",
-    "5k": "21:29",
+    "date": "2026-11-14",
+    "5k": "21:39",
     "10k": "45:02",
-    "half": "1:42:14"
+    "half": "1:42:44"
   },
   "strength": {
     "rounds": 3,
@@ -266,8 +264,8 @@
     ]
   },
   "watch_sync": {
-    "date": "2026-11-13",
+    "date": "2026-11-14",
     "status": "applied",
-    "changes": 8
+    "changes": 2
   }
 }
