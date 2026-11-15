@@ -1,17 +1,17 @@
 {
-  "generated_for": "2026-11-14",
+  "generated_for": "2026-11-15",
   "source": "garmin_calendar",
   "plan_name": "",
   "today": {
-    "date": "2026-11-14",
+    "date": "2026-11-15",
     "level": "yellow",
     "workouts": [
       {
         "code": "base",
         "label": "BASE RUN",
-        "name": "편한 달리기 8.7킬로 (냥코치)",
-        "detail": "8.7KM",
-        "distance_km": 8.7,
+        "name": "편한 달리기 2.5킬로 (냥코치)",
+        "detail": "2.5KM",
+        "distance_km": 2.5,
         "duration_min": null,
         "pace": null,
         "description": "",
@@ -20,114 +20,24 @@
         "source": "garmin_calendar"
       }
     ],
-    "kind": "편한 달리기 8.7킬로 (냥코치)",
+    "kind": "편한 달리기 2.5킬로 (냥코치)",
     "kind_code": "base",
     "label": "BASE RUN",
-    "detail": "8.7KM",
-    "distance_km": 8.7,
+    "detail": "2.5KM",
+    "distance_km": 2.5,
     "pace": null,
     "duration_min": null
   },
   "days": [
-    {
-      "date": "2026-11-08",
-      "workouts": [
-        {
-          "code": "base",
-          "label": "BASE RUN",
-          "name": "편한 달리기 4.2킬로 (냥코치)",
-          "detail": "4.2KM",
-          "distance_km": 4.2,
-          "duration_min": null,
-          "done": false,
-          "source": "garmin_calendar"
-        }
-      ]
-    },
-    {
-      "date": "2026-11-10",
-      "workouts": [
-        {
-          "code": "tempo",
-          "label": "TEMPO",
-          "name": "템포(마라톤 페이스) 4.2킬로 (냥코치)",
-          "detail": "4.2KM",
-          "distance_km": 4.2,
-          "duration_min": null,
-          "done": false,
-          "source": "garmin_calendar"
-        }
-      ]
-    },
-    {
-      "date": "2026-11-11",
-      "workouts": [
-        {
-          "code": "base",
-          "label": "BASE RUN",
-          "name": "편한 달리기 4.2킬로 (냥코치)",
-          "detail": "4.2KM",
-          "distance_km": 4.2,
-          "duration_min": null,
-          "done": false,
-          "source": "garmin_calendar"
-        }
-      ]
-    },
-    {
-      "date": "2026-11-12",
-      "workouts": [
-        {
-          "code": "threshold",
-          "label": "THRESHOLD",
-          "name": "역치 1킬로 2회 (냥코치)",
-          "detail": "",
-          "distance_km": null,
-          "duration_min": null,
-          "done": false,
-          "source": "garmin_calendar"
-        }
-      ]
-    },
-    {
-      "date": "2026-11-13",
-      "workouts": [
-        {
-          "code": "strength",
-          "label": "STRENGTH",
-          "name": "근력 맨몸 30분 하체·코어 (냥코치)",
-          "detail": "",
-          "distance_km": null,
-          "duration_min": null,
-          "done": false,
-          "source": "garmin_calendar"
-        }
-      ]
-    },
-    {
-      "date": "2026-11-14",
-      "workouts": [
-        {
-          "code": "base",
-          "label": "BASE RUN",
-          "name": "편한 달리기 8.7킬로 (냥코치)",
-          "detail": "8.7KM",
-          "distance_km": 8.7,
-          "duration_min": null,
-          "done": false,
-          "source": "garmin_calendar"
-        }
-      ]
-    },
     {
       "date": "2026-11-15",
       "workouts": [
         {
           "code": "base",
           "label": "BASE RUN",
-          "name": "편한 달리기 3킬로 (냥코치)",
-          "detail": "3.0KM",
-          "distance_km": 3.0,
+          "name": "편한 달리기 2.5킬로 (냥코치)",
+          "detail": "2.5KM",
+          "distance_km": 2.5,
           "duration_min": null,
           "done": false,
           "source": "garmin_calendar"
@@ -155,9 +65,9 @@
         {
           "code": "base",
           "label": "BASE RUN",
-          "name": "편한 달리기 3킬로 (냥코치)",
-          "detail": "3.0KM",
-          "distance_km": 3.0,
+          "name": "편한 달리기 2.5킬로 (냥코치)",
+          "detail": "2.5KM",
+          "distance_km": 2.5,
           "duration_min": null,
           "done": false,
           "source": "garmin_calendar"
@@ -185,9 +95,99 @@
         {
           "code": "long",
           "label": "LONG RUN",
-          "name": "장거리 6.4킬로 (냥코치)",
-          "detail": "6.4KM",
-          "distance_km": 6.4,
+          "name": "장거리 5.3킬로 (냥코치)",
+          "detail": "5.3KM",
+          "distance_km": 5.3,
+          "duration_min": null,
+          "done": false,
+          "source": "garmin_calendar"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-22",
+      "workouts": [
+        {
+          "code": "base",
+          "label": "BASE RUN",
+          "name": "편한 달리기 1.5킬로 (냥코치)",
+          "detail": "1.5KM",
+          "distance_km": 1.5,
+          "duration_min": null,
+          "done": false,
+          "source": "garmin_calendar"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-24",
+      "workouts": [
+        {
+          "code": "threshold",
+          "label": "THRESHOLD",
+          "name": "역치 1킬로 2회 (냥코치)",
+          "detail": "",
+          "distance_km": null,
+          "duration_min": null,
+          "done": false,
+          "source": "garmin_calendar"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-25",
+      "workouts": [
+        {
+          "code": "base",
+          "label": "BASE RUN",
+          "name": "편한 달리기 1.5킬로 (냥코치)",
+          "detail": "1.5KM",
+          "distance_km": 1.5,
+          "duration_min": null,
+          "done": false,
+          "source": "garmin_calendar"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-26",
+      "workouts": [
+        {
+          "code": "base",
+          "label": "BASE RUN",
+          "name": "편한 달리기 1.5킬로 (냥코치)",
+          "detail": "1.5KM",
+          "distance_km": 1.5,
+          "duration_min": null,
+          "done": false,
+          "source": "garmin_calendar"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-27",
+      "workouts": [
+        {
+          "code": "strength",
+          "label": "STRENGTH",
+          "name": "근력 맨몸 30분 하체·코어 (냥코치)",
+          "detail": "",
+          "distance_km": null,
+          "duration_min": null,
+          "done": false,
+          "source": "garmin_calendar"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-28",
+      "workouts": [
+        {
+          "code": "run",
+          "label": "RUN",
+          "name": "기록 측정 5킬로 (냥코치)",
+          "detail": "8.0KM",
+          "distance_km": 8.0,
           "duration_min": null,
           "done": false,
           "source": "garmin_calendar"
@@ -195,5 +195,5 @@
       ]
     }
   ],
-  "days_to": "2026-11-21"
+  "days_to": "2026-11-28"
 }
