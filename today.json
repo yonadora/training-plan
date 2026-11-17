@@ -1,30 +1,30 @@
 {
-  "generated_for": "2026-11-16",
+  "generated_for": "2026-11-17",
   "source": "garmin_calendar",
   "plan_name": "",
   "today": {
-    "date": "2026-11-16",
+    "date": "2026-11-17",
     "level": "yellow",
     "workouts": [
       {
-        "code": "rest",
-        "label": "REST",
-        "name": "휴식",
-        "detail": "",
-        "distance_km": null,
+        "code": "tempo",
+        "label": "TEMPO",
+        "name": "템포(마라톤 페이스) 2.2킬로 (냥코치)",
+        "detail": "2.2KM",
+        "distance_km": 2.2,
         "duration_min": null,
         "pace": null,
         "description": "",
-        "sport": "",
+        "sport": "running",
         "done": false,
-        "source": ""
+        "source": "garmin_calendar"
       }
     ],
-    "kind": "휴식",
-    "kind_code": "rest",
-    "label": "REST",
-    "detail": "",
-    "distance_km": null,
+    "kind": "템포(마라톤 페이스) 2.2킬로 (냥코치)",
+    "kind_code": "tempo",
+    "label": "TEMPO",
+    "detail": "2.2KM",
+    "distance_km": 2.2,
     "pace": null,
     "duration_min": null
   },
@@ -48,11 +48,11 @@
       "date": "2026-11-17",
       "workouts": [
         {
-          "code": "threshold",
-          "label": "THRESHOLD",
-          "name": "역치 1킬로 2회 (냥코치)",
-          "detail": "",
-          "distance_km": null,
+          "code": "tempo",
+          "label": "TEMPO",
+          "name": "템포(마라톤 페이스) 2.2킬로 (냥코치)",
+          "detail": "2.2KM",
+          "distance_km": 2.2,
           "duration_min": null,
           "done": false,
           "source": "garmin_calendar"
@@ -65,9 +65,9 @@
         {
           "code": "base",
           "label": "BASE RUN",
-          "name": "편한 달리기 2.3킬로 (냥코치)",
-          "detail": "2.3KM",
-          "distance_km": 2.3,
+          "name": "편한 달리기 2.2킬로 (냥코치)",
+          "detail": "2.2KM",
+          "distance_km": 2.2,
           "duration_min": null,
           "done": false,
           "source": "garmin_calendar"
@@ -95,9 +95,9 @@
         {
           "code": "long",
           "label": "LONG RUN",
-          "name": "장거리 5.1킬로 (냥코치)",
-          "detail": "5.1KM",
-          "distance_km": 5.1,
+          "name": "장거리 4.8킬로 (냥코치)",
+          "detail": "4.8KM",
+          "distance_km": 4.8,
           "duration_min": null,
           "done": false,
           "source": "garmin_calendar"
