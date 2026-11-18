@@ -5,9 +5,9 @@
     "weekday": "수",
     "kind": "편한 조깅",
     "kind_code": "easy",
-    "distance_km": 2.1,
+    "distance_km": 3.3,
     "pace": "5:36",
-    "duration_min": 12,
+    "duration_min": 18,
     "level": "yellow",
     "level_label": "노랑",
     "reasons": [
@@ -25,7 +25,7 @@
       "source": "가민 설정",
       "read_at": "2026-11-18"
     },
-    "planned_km": 11.4,
+    "planned_km": 15.1,
     "done_km": 0,
     "days": [
       {
@@ -78,7 +78,7 @@
         "weekday": "수",
         "kind": "편한 조깅",
         "kind_code": "easy",
-        "distance_km": 2.1,
+        "distance_km": 3.3,
         "pace": "5:36",
         "strides": 0,
         "is_today": true,
@@ -123,7 +123,7 @@
         "weekday": "토",
         "kind": "편한 조깅",
         "kind_code": "easy",
-        "distance_km": 4.6,
+        "distance_km": 7.1,
         "pace": "5:36",
         "strides": 6,
         "is_today": false,
