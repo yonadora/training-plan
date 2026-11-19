@@ -1,17 +1,17 @@
 {
-  "generated_for": "2026-11-18",
+  "generated_for": "2026-11-20",
   "today": {
-    "date": "2026-11-18",
-    "weekday": "수",
-    "kind": "편한 조깅",
-    "kind_code": "easy",
-    "distance_km": 3.3,
-    "pace": "5:36",
-    "duration_min": 18,
-    "level": "yellow",
-    "level_label": "노랑",
+    "date": "2026-11-20",
+    "weekday": "금",
+    "kind": "근력",
+    "kind_code": "strength",
+    "distance_km": 0.0,
+    "pace": null,
+    "duration_min": null,
+    "level": "green",
+    "level_label": "초록",
     "reasons": [
-      "안정시 심박 60 (평소보다 +5)"
+      "오늘 지표 없음 — 판정 없이 예정대로"
     ],
     "garmin_note": null,
     "done_km": 0,
@@ -23,10 +23,10 @@
     "first_day": {
       "first_weekday": "일",
       "source": "가민 설정",
-      "read_at": "2026-11-18"
+      "read_at": "2026-11-20"
     },
-    "planned_km": 15.1,
-    "done_km": 0,
+    "planned_km": 13.9,
+    "done_km": 5.5,
     "days": [
       {
         "date": "2026-11-15",
@@ -78,14 +78,14 @@
         "weekday": "수",
         "kind": "편한 조깅",
         "kind_code": "easy",
-        "distance_km": 3.3,
+        "distance_km": 2.1,
         "pace": "5:36",
         "strides": 0,
-        "is_today": true,
-        "done": false,
-        "actual_km": 0,
-        "actual_min": 0,
-        "fixed": false,
+        "is_today": false,
+        "done": true,
+        "actual_km": 5.47,
+        "actual_min": 27,
+        "fixed": true,
         "recomputed": false
       },
       {
@@ -101,7 +101,7 @@
         "actual_km": 0,
         "actual_min": 0,
         "fixed": false,
-        "recomputed": false
+        "recomputed": true
       },
       {
         "date": "2026-11-20",
@@ -111,7 +111,7 @@
         "distance_km": 0.0,
         "pace": null,
         "strides": 0,
-        "is_today": false,
+        "is_today": true,
         "done": false,
         "actual_km": 0,
         "actual_min": 0,
@@ -121,11 +121,11 @@
       {
         "date": "2026-11-21",
         "weekday": "토",
-        "kind": "편한 조깅",
-        "kind_code": "easy",
+        "kind": "롱런",
+        "kind_code": "long",
         "distance_km": 7.1,
         "pace": "5:36",
-        "strides": 6,
+        "strides": 0,
         "is_today": false,
         "done": false,
         "actual_km": 0,
@@ -134,7 +134,7 @@
         "recomputed": false
       }
     ],
-    "actual_min": 0
+    "actual_min": 27
   },
   "goal": {
     "distance_km": 10.0,
@@ -190,9 +190,9 @@
     },
     {
       "start": "2026-11-15",
-      "km": 0,
-      "runs": 0,
-      "avg_pace": null
+      "km": 5.5,
+      "runs": 1,
+      "avg_pace": "4:57"
     }
   ],
   "race_strategy": null,
@@ -206,10 +206,10 @@
     "longest_share": 0.56
   },
   "garmin_prediction": {
-    "date": "2026-11-18",
+    "date": "2026-11-19",
     "5k": "21:40",
-    "10k": "45:04",
-    "half": "1:43:24"
+    "10k": "45:05",
+    "half": "1:43:21"
   },
   "strength": {
     "rounds": 3,
@@ -264,8 +264,8 @@
     ]
   },
   "watch_sync": {
-    "date": "2026-11-18",
+    "date": "2026-11-20",
     "status": "applied",
-    "changes": 6
+    "changes": 4
   }
 }
