@@ -1,30 +1,30 @@
 {
-  "generated_for": "2026-11-22",
+  "generated_for": "2026-11-23",
   "source": "garmin_calendar",
   "plan_name": "",
   "today": {
-    "date": "2026-11-22",
+    "date": "2026-11-23",
     "level": "green",
     "workouts": [
       {
-        "code": "base",
-        "label": "BASE RUN",
-        "name": "편한 달리기 2.9킬로 (냥코치)",
-        "detail": "2.9KM",
-        "distance_km": 2.9,
+        "code": "rest",
+        "label": "REST",
+        "name": "휴식",
+        "detail": "",
+        "distance_km": null,
         "duration_min": null,
         "pace": null,
         "description": "",
-        "sport": "running",
+        "sport": "",
         "done": false,
-        "source": "garmin_calendar"
+        "source": ""
       }
     ],
-    "kind": "편한 달리기 2.9킬로 (냥코치)",
-    "kind_code": "base",
-    "label": "BASE RUN",
-    "detail": "2.9KM",
-    "distance_km": 2.9,
+    "kind": "휴식",
+    "kind_code": "rest",
+    "label": "REST",
+    "detail": "",
+    "distance_km": null,
     "pace": null,
     "duration_min": null
   },
