@@ -1,28 +1,28 @@
 {
-  "generated_for": "2026-11-23",
+  "generated_for": "2026-11-24",
   "source": "garmin_calendar",
   "plan_name": "",
   "today": {
-    "date": "2026-11-23",
+    "date": "2026-11-24",
     "level": "green",
     "workouts": [
       {
-        "code": "rest",
-        "label": "REST",
-        "name": "휴식",
+        "code": "threshold",
+        "label": "THRESHOLD",
+        "name": "역치 1킬로 2회 (냥코치)",
         "detail": "",
         "distance_km": null,
         "duration_min": null,
         "pace": null,
         "description": "",
-        "sport": "",
+        "sport": "running",
         "done": false,
-        "source": ""
+        "source": "garmin_calendar"
       }
     ],
-    "kind": "휴식",
-    "kind_code": "rest",
-    "label": "REST",
+    "kind": "역치 1킬로 2회 (냥코치)",
+    "kind_code": "threshold",
+    "label": "THRESHOLD",
     "detail": "",
     "distance_km": null,
     "pace": null,
