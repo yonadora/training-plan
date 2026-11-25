@@ -1,17 +1,17 @@
 {
-  "generated_for": "2026-11-24",
+  "generated_for": "2026-11-25",
   "source": "garmin_calendar",
   "plan_name": "",
   "today": {
-    "date": "2026-11-24",
+    "date": "2026-11-25",
     "level": "green",
     "workouts": [
       {
-        "code": "threshold",
-        "label": "THRESHOLD",
-        "name": "역치 1킬로 2회 (냥코치)",
-        "detail": "",
-        "distance_km": null,
+        "code": "base",
+        "label": "BASE RUN",
+        "name": "편한 달리기 2.9킬로 (냥코치)",
+        "detail": "2.9KM",
+        "distance_km": 2.9,
         "duration_min": null,
         "pace": null,
         "description": "",
@@ -20,11 +20,11 @@
         "source": "garmin_calendar"
       }
     ],
-    "kind": "역치 1킬로 2회 (냥코치)",
-    "kind_code": "threshold",
-    "label": "THRESHOLD",
-    "detail": "",
-    "distance_km": null,
+    "kind": "편한 달리기 2.9킬로 (냥코치)",
+    "kind_code": "base",
+    "label": "BASE RUN",
+    "detail": "2.9KM",
+    "distance_km": 2.9,
     "pace": null,
     "duration_min": null
   },
