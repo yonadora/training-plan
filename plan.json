@@ -1,17 +1,17 @@
 {
-  "generated_for": "2026-11-25",
+  "generated_for": "2026-11-26",
   "today": {
-    "date": "2026-11-25",
-    "weekday": "수",
+    "date": "2026-11-26",
+    "weekday": "목",
     "kind": "편한 조깅",
     "kind_code": "easy",
     "distance_km": 2.9,
     "pace": "5:36",
     "duration_min": 16,
-    "level": "green",
-    "level_label": "초록",
+    "level": "yellow",
+    "level_label": "노랑",
     "reasons": [
-      "준비도 93"
+      "안정시 심박 71 (평소보다 +13)"
     ],
     "garmin_note": null,
     "done_km": 0,
@@ -23,7 +23,7 @@
     "first_day": {
       "first_weekday": "일",
       "source": "가민 설정",
-      "read_at": "2026-11-25"
+      "read_at": "2026-11-26"
     },
     "planned_km": 19.6,
     "done_km": 0,
@@ -81,11 +81,11 @@
         "distance_km": 2.9,
         "pace": "5:36",
         "strides": 0,
-        "is_today": true,
+        "is_today": false,
         "done": false,
         "actual_km": 0,
         "actual_min": 0,
-        "fixed": false,
+        "fixed": true,
         "recomputed": false
       },
       {
@@ -96,7 +96,7 @@
         "distance_km": 2.9,
         "pace": "5:36",
         "strides": 0,
-        "is_today": false,
+        "is_today": true,
         "done": false,
         "actual_km": 0,
         "actual_min": 0,
@@ -206,10 +206,10 @@
     "longest_share": 0.56
   },
   "garmin_prediction": {
-    "date": "2026-11-25",
+    "date": "2026-11-26",
     "5k": "21:41",
-    "10k": "45:10",
-    "half": "1:44:16"
+    "10k": "45:11",
+    "half": "1:44:21"
   },
   "strength": {
     "rounds": 3,
@@ -264,7 +264,7 @@
     ]
   },
   "watch_sync": {
-    "date": "2026-11-25",
+    "date": "2026-11-26",
     "status": "applied",
     "changes": 1
   }
