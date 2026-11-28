@@ -1,13 +1,13 @@
 {
-  "generated_for": "2026-11-27",
+  "generated_for": "2026-11-28",
   "today": {
-    "date": "2026-11-27",
-    "weekday": "금",
-    "kind": "근력",
-    "kind_code": "strength",
-    "distance_km": 0.0,
-    "pace": null,
-    "duration_min": null,
+    "date": "2026-11-28",
+    "weekday": "토",
+    "kind": "기록 측정",
+    "kind_code": "check",
+    "distance_km": 8.0,
+    "pace": "4:23",
+    "duration_min": 35,
     "level": "green",
     "level_label": "초록",
     "reasons": [
@@ -23,7 +23,7 @@
     "first_day": {
       "first_weekday": "일",
       "source": "가민 설정",
-      "read_at": "2026-11-27"
+      "read_at": "2026-11-28"
     },
     "planned_km": 19.6,
     "done_km": 0,
@@ -111,11 +111,11 @@
         "distance_km": 0.0,
         "pace": null,
         "strides": 0,
-        "is_today": true,
+        "is_today": false,
         "done": false,
         "actual_km": 0,
         "actual_min": 0,
-        "fixed": false,
+        "fixed": true,
         "recomputed": false
       },
       {
@@ -126,7 +126,7 @@
         "distance_km": 8.0,
         "pace": "4:23",
         "strides": 0,
-        "is_today": false,
+        "is_today": true,
         "done": false,
         "actual_km": 0,
         "actual_min": 0,
@@ -206,10 +206,10 @@
     "longest_share": 0.56
   },
   "garmin_prediction": {
-    "date": "2026-11-27",
+    "date": "2026-11-28",
     "5k": "21:41",
-    "10k": "45:12",
-    "half": "1:44:28"
+    "10k": "45:13",
+    "half": "1:44:34"
   },
   "strength": {
     "rounds": 3,
@@ -264,8 +264,8 @@
     ]
   },
   "watch_sync": {
-    "date": "2026-11-27",
+    "date": "2026-11-28",
     "status": "applied",
-    "changes": 5
+    "changes": 1
   }
 }

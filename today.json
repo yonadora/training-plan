@@ -1,30 +1,30 @@
 {
-  "generated_for": "2026-11-27",
+  "generated_for": "2026-11-28",
   "source": "garmin_calendar",
   "plan_name": "",
   "today": {
-    "date": "2026-11-27",
+    "date": "2026-11-28",
     "level": "green",
     "workouts": [
       {
-        "code": "strength",
-        "label": "STRENGTH",
-        "name": "근력 맨몸 30분 하체·코어 (냥코치)",
-        "detail": "",
-        "distance_km": null,
+        "code": "run",
+        "label": "RUN",
+        "name": "기록 측정 5킬로 (냥코치)",
+        "detail": "8.0KM",
+        "distance_km": 8.0,
         "duration_min": null,
         "pace": null,
         "description": "",
-        "sport": "strength_training",
+        "sport": "running",
         "done": false,
         "source": "garmin_calendar"
       }
     ],
-    "kind": "근력 맨몸 30분 하체·코어 (냥코치)",
-    "kind_code": "strength",
-    "label": "STRENGTH",
-    "detail": "",
-    "distance_km": null,
+    "kind": "기록 측정 5킬로 (냥코치)",
+    "kind_code": "run",
+    "label": "RUN",
+    "detail": "8.0KM",
+    "distance_km": 8.0,
     "pace": null,
     "duration_min": null
   },
